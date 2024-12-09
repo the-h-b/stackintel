@@ -1,10 +1,12 @@
 "use client";
 
-import Card from "@/components/Card";
 import React from "react";
+import Image from "next/image";
+import Card from "@/components/Card";
 import ServiceImage1 from "../../../assets/static/services/service1.svg";
 import ServiceImage2 from "../../../assets/static/services/service2.svg";
 import ServiceImage3 from "../../../assets/static/services/service3.svg";
+import { motion } from "framer-motion";
 
 const cardContents = [
   {
@@ -31,30 +33,72 @@ const cardContents = [
 ];
 
 const Service = () => {
+  // Define animation variants for the container and text items
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Stagger the animation of children by 0.3 seconds
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <div className="relative flex flex-col justify-center items-center mt-[4em] md:mt-[6em] lg:mt-[10em] ">
-      {/* Left side blurred blobs (moving slightly to the right and back) */}
-      <div className="absolute -left-20 top-20 w-32 h-32 bg-purple-500 rounded-full blur-2xl opacity-50 animate-leftfloat"></div>
-      <div className="absolute -left-16 top-48 w-24 h-24 bg-pink-400 rounded-full blur-2xl opacity-40 animate-leftfloat2"></div>
-      <div className="absolute -left-10 top-80 w-28 h-28 bg-blue-300 rounded-full blur-2xl opacity-50 animate-leftfloat3"></div>
+    <div className="relative flex flex-col justify-center items-center mt-[4em] md:mt-[6em] lg:mt-[10em] overflow-hidden px-4">
+      {/* Background Blobs with Animations */}
+      <div className="absolute -left-[400px] top-32 w-32 h-20 bg-purple-500 rounded-full blur-2xl opacity-50 animate-leftfloat"></div>
+      <div className="absolute -left-[300px] top-48 w-24 h-24 bg-pink-400 rounded-full blur-2xl opacity-40 animate-leftfloat2"></div>
+      <div className="absolute -left-[400px] top-80 w-28 h-28 bg-blue-300 rounded-full blur-2xl opacity-50 animate-leftfloat3"></div>
 
-      {/* Purple circle with blur effect (center-left-ish) - also moving horizontally */}
-      <div className="absolute left-0 top-0 w-40 h-40 bg-purple-400 rounded-full blur-3xl opacity-30 animate-leftfloat4"></div>
+      {/* Purple Circle with Blur Effect */}
+      <div className="absolute left-[90px] top-[140px] w-32 h-32 bg-purple-700 rounded-full blur-3xl opacity-40 animate-leftfloat4"></div>
 
-      {/* Right side blurred blobs (moving slightly to the left and back) */}
-      <div className="absolute -right-16 top-24 w-28 h-28 bg-green-300 rounded-full blur-2xl opacity-40 animate-rightfloat"></div>
-      <div className="absolute -right-10 top-64 w-24 h-24 bg-yellow-300 rounded-full blur-2xl opacity-50 animate-rightfloat2"></div>
+      {/* Right Side Blurred Blobs */}
+      <div className="absolute right-32 top-24 w-28 h-28 bg-green-300 rounded-full blur-2xl opacity-40 animate-rightfloat"></div>
+      <div className="absolute right-10 top-64 w-24 h-24 bg-yellow-300 rounded-full blur-2xl opacity-50 animate-rightfloat2"></div>
 
-      <p className="text-gray-500 text-md md:text-lg font-semibold tracking-wide pb-2 md:pb-5 lg:pb-6">
-        Product
-      </p>
-      <p className="text-3xl font-light pb-2 md:pb-5 lg:pb-6">
-        Built for Game-Changers
-      </p>
-      <p className="w-[50%] text-md md:text-lg font-medium text-center text-gray-500 pb-2 md:pb-5 lg:pb-6">
-        Why Settle When You Can Soar?
-      </p>
+      {/* Animated Text Section */}
+      <motion.div
+        className="flex flex-col items-center text-center"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }} // Trigger every time 20% of the component is in view
+      >
+        <motion.p
+          className="text-gray-500 text-md md:text-lg font-semibold tracking-wide pb-2 md:pb-5 lg:pb-6"
+          variants={itemVariants}
+        >
+          Product
+        </motion.p>
+        <motion.p
+          className="text-3xl font-light pb-2 md:pb-5 lg:pb-6"
+          variants={itemVariants}
+        >
+          Built for Game-Changers
+        </motion.p>
+        <motion.p
+          className="w-full md:w-[50%] text-md md:text-lg font-medium text-center text-gray-500 pb-2 md:pb-5 lg:pb-6"
+          variants={itemVariants}
+        >
+          Why Settle When You Can Soar?
+        </motion.p>
+      </motion.div>
 
+      {/* Service Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6 mt-10">
         {cardContents.map((content) => (
           <div key={content.id}>
@@ -67,13 +111,14 @@ const Service = () => {
         ))}
       </div>
 
+      {/* Inline Styles for Background Animations */}
       <style jsx>{`
         @keyframes floatHorizontalLeft {
           0% {
             transform: translateX(0px);
           }
           50% {
-            transform: translateX(300px);
+            transform: translateX(100px);
           }
           100% {
             transform: translateX(0px);

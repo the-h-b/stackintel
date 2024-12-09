@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 
 interface CardProps {
   image: StaticImageData;
@@ -8,10 +11,23 @@ interface CardProps {
 }
 
 const Card = ({ image, title, description }: CardProps) => {
+  // Define animation variants for the text elements
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <div className="relative overflow-hidden flex flex-col items-center w-[300px] h-[450px] rounded-lg border border-white backdrop-blur-md bg-white/25 px-8 py-[2em]">
       {/* Image Section */}
-      <div className="h-auto w-[90%]  overflow-hidden rounded-md mb-4">
+      <div className="h-auto w-[90%] overflow-hidden rounded-md mb-4">
         <Image
           src={image}
           alt="services-image"
@@ -21,12 +37,26 @@ const Card = ({ image, title, description }: CardProps) => {
         />
       </div>
       <div className="absolute top-56 left-6 w-[90%]">
-        {/* Title */}
-        <p className="text-gray-950 text-left font-normal text-xl mb-2">
+        {/* Title with Animation */}
+        <motion.p
+          className="text-gray-950 text-left font-normal text-xl mb-2"
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.6 }}
+        >
           {title}
-        </p>
-        {/* Description */}
-        <p className="text-gray-700 text-left text-md">{description}</p>
+        </motion.p>
+        {/* Description with Animation */}
+        <motion.p
+          className="text-gray-700 text-left text-md"
+          variants={textVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.1 }}
+        >
+          {description}
+        </motion.p>
       </div>
     </div>
   );
