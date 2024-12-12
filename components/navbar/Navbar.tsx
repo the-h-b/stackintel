@@ -33,8 +33,8 @@ const Navbar = () => {
 
           <div className="flex flex-row justify-center items-center gap-x-4">
             <Link href="#about-section">About Us</Link>
-            <Link href="#about-section">Features</Link>
-            <Link href="#about-section">Services</Link>
+            <Link href="#service-section">Features</Link>
+            <Link href="#scale-section">Services</Link>
           </div>
 
           {/* Get Started Button */}
