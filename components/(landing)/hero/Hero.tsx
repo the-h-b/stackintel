@@ -43,7 +43,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen md:flex-row md:justify-between justify-center items-center gap-y-4">
+    <div className="flex flex-col h-screen lg:flex-row lg:justify-between justify-center items-center gap-y-4">
       {/* Left Column with Staggered Animation */}
       <motion.div
         className="flex flex-col justify-center items-center lg:justify-start lg:items-start gap-y-6 md:w-[50%]"

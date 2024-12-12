@@ -6,22 +6,35 @@ import HeroImage from "../../assets/static/stacklogo.png";
 import Button from "../Button";
 import PopupForm from "../PopupForm";
 import Link from "next/link";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
+  };
+
+  const handleScrollToFooter = () => {
+    const footerSection = document.getElementById("footer-section");
+    if (footerSection) {
+      footerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
 
+  const handleMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
+
   return (
     <>
       <nav className="sticky top-0 bg-[#EFF1F5]/25 backdrop-blur-md border border-white w-full h-auto z-[999]">
-        <div className="max-w-7xl mx-auto px-2 flex flex-row justify-between items-center h-14 md:h-20">
+        <div className="max-w-7xl mx-auto px-2 flex flex-row justify-between items-center h-12 md:h-20">
           {/* Hero Image */}
           <Image
             src={HeroImage}
@@ -31,18 +44,64 @@ const Navbar = () => {
             className="h-auto w-[35%] md:w-[20%] lg:w-[15%]"
           />
 
-          <div className="flex flex-row justify-center items-center gap-x-4">
-            <Link href="#about-section">About Us</Link>
-            <Link href="#service-section">Features</Link>
-            <Link href="#scale-section">Services</Link>
+          <div className="hidden lg:flex flex-row justify-center items-center gap-x-[4em]">
+            <Link href="#about-section" className="text-[16px] tracking-wide">
+              About Us
+            </Link>
+            <Link href="#service-section" className="text-[16px] tracking-wide">
+              Features
+            </Link>
+            <Link href="#scale-section" className="text-[16px] tracking-wide">
+              Services
+            </Link>
+            <button
+              className="text-[16px] tracking-wide"
+              onClick={handleScrollToFooter}
+            >
+              Contact Us
+            </button>
           </div>
 
           {/* Get Started Button */}
-          <div className="block flex items-center">
+          <div className="hidden lg:flex items-center">
             <Button buttonText={"Get Started"} onClick={handleOpenModal} />
           </div>
+
+          {/* Hamburger menu */}
+          <button className="" onClick={handleMobileMenu}>
+            <RxHamburgerMenu size={24} />
+          </button>
         </div>
       </nav>
+
+      {mobileMenu && (
+        <div className="absolute top-24 right-2 border border-white p-6 rounded-lg lg:hidden flex flex-col justify-center items-center gap-y-[1em]">
+          <Link
+            href="#about-section"
+            className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
+          >
+            About Us
+          </Link>
+          <Link
+            href="#service-section"
+            className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
+          >
+            Features
+          </Link>
+          <Link
+            href="#scale-section"
+            className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
+          >
+            Services
+          </Link>
+          <button
+            className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
+            onClick={handleScrollToFooter}
+          >
+            Contact Us
+          </button>
+        </div>
+      )}
 
       {/* PopupForm Modal */}
       <PopupForm
