@@ -1,6 +1,5 @@
 import About from "@/components/(landing)/about/About";
 import Hero from "@/components/(landing)/hero/Hero";
-import Innovation from "@/components/(landing)/innovation/Innovation";
 import Scale from "@/components/(landing)/scale/Scale";
 import Service from "@/components/(landing)/services/Service";
 import Cta from "@/components/(landing)/cta/Cta";
@@ -20,9 +19,9 @@ export default function Home() {
       <div id="scale-section">
         <Scale />
       </div>
-      <div id="innovation-section">
+      {/* <div id="innovation-section">
         <Innovation />
-      </div>
+      </div> */}
       <Cta />
     </>
   );
