@@ -5,6 +5,7 @@ import Image from "next/image";
 import HeroImage from "../../assets/static/stacklogo.png";
 import Button from "../Button";
 import PopupForm from "../PopupForm";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,6 +30,10 @@ const Navbar = () => {
             width={500}
             className="h-auto w-[35%] md:w-[20%] lg:w-[15%]"
           />
+
+          <div className="flex flex-row justify-center items-center gap-x-4">
+            <Link href="#about-section">About Us</Link>
+          </div>
 
           {/* Get Started Button */}
           <div className="block flex items-center">

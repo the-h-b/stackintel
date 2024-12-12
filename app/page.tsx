@@ -4,16 +4,25 @@ import Innovation from "@/components/(landing)/innovation/Innovation";
 import Scale from "@/components/(landing)/scale/Scale";
 import Service from "@/components/(landing)/services/Service";
 import Cta from "@/components/(landing)/cta/Cta";
-import PopupForm from "@/components/PopupForm";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <About />
-      <Service />
-      <Scale />
-      <Innovation />
+      <div id="hero-section">
+        <Hero />
+      </div>
+      <div id="about-section">
+        <About />
+      </div>
+      <div id="service-section">
+        <Service />
+      </div>
+      <div id="scale-section">
+        <Scale />
+      </div>
+      <div id="innovation-section">
+        <Innovation />
+      </div>
       <Cta />
     </>
   );
