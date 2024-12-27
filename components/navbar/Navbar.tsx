@@ -48,11 +48,17 @@ const Navbar = () => {
             <Link href="#about-section" className="text-[16px] tracking-wide">
               About Us
             </Link>
-            <Link href="#service-section" className="text-[16px] tracking-wide">
+            <Link
+              href="#features-section"
+              className="text-[16px] tracking-wide"
+            >
               Features
             </Link>
             <Link href="#scale-section" className="text-[16px] tracking-wide">
               Services
+            </Link>
+            <Link href="/products" className="text-[16px] tracking-wide">
+              Products
             </Link>
             <button
               className="text-[16px] tracking-wide"
@@ -68,7 +74,7 @@ const Navbar = () => {
           </div>
 
           {/* Hamburger menu */}
-          <button className="" onClick={handleMobileMenu}>
+          <button className="block lg:hidden " onClick={handleMobileMenu}>
             <RxHamburgerMenu size={24} />
           </button>
         </div>
@@ -93,6 +99,12 @@ const Navbar = () => {
             className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
           >
             Services
+          </Link>
+          <Link
+            href="/products"
+            className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
+          >
+            Products
           </Link>
           <button
             className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"

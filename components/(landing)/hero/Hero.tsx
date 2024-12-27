@@ -56,7 +56,7 @@ const Hero = () => {
           className="text-4xl md:text-6xl text-center lg:text-left text-primaryColor"
           variants={itemVariants}
         >
-          Revolutionalize <br /> Card Issuing.
+          Revolutionize <br /> Modern Banking.
         </motion.h1>
         <motion.h6
           className="text-lg text-center lg:text-left text-gray-700 w-[95%] md:w-[80%]"

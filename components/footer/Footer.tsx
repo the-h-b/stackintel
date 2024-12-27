@@ -1,9 +1,9 @@
-import React from "react";
-import FooterLogo from "../../assets/static/stacklogo.png";
+import Image from "next/image";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import Image from "next/image";
-import Link from "next/link";
+import CeritificationLogoPCI from "../../assets/static/certification_logo_pic.png";
+import CeritificationLogoISO from "../../assets/static/certification_logo_iso.png";
+import FooterLogo from "../../assets/static/stacklogo.png";
 
 const Footer = () => {
   return (
@@ -18,6 +18,19 @@ const Footer = () => {
             width={500}
             className="h-auto w-[40%] -ml-2 md:ml-0 lg:w-[30%]"
           />
+
+          <div className="flex gap-4 my-5 px-3">
+            <Image
+              src={CeritificationLogoPCI}
+              alt="footer logo"
+              className="h-auto w-[130px]"
+            />
+            <Image
+              src={CeritificationLogoISO}
+              alt="footer logo"
+              className="h-auto w-[100%]"
+            />
+          </div>
           <div className="w-full px-2 flex flex-col justify-between items-start mx-auto mt-4 text-left mb-2 text-gray-500 text-md ">
             <div className="flex flex-col justify-start items-start">
               <div>

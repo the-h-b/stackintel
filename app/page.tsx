@@ -7,22 +7,24 @@ import Cta from "@/components/(landing)/cta/Cta";
 export default function Home() {
   return (
     <>
-      <div id="hero-section">
-        <Hero />
-      </div>
-      <div id="about-section">
-        <About />
-      </div>
-      <div id="service-section">
-        <Service />
-      </div>
-      <div id="scale-section">
-        <Scale />
-      </div>
-      {/* <div id="innovation-section">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div id="hero-section">
+          <Hero />
+        </div>
+        <div id="about-section">
+          <About />
+        </div>
+        <div id="service-section">
+          <Service />
+        </div>
+        <div id="scale-section">
+          <Scale />
+        </div>
+        {/* <div id="innovation-section">
         <Innovation />
       </div> */}
-      <Cta />
+        <Cta />
+      </div>
     </>
   );
 }
