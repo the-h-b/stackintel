@@ -57,9 +57,9 @@ const Navbar = () => {
             <Link href="#scale-section" className="text-[16px] tracking-wide">
               Services
             </Link>
-            <Link href="/products" className="text-[16px] tracking-wide">
+            {/* <Link href="/products" className="text-[16px] tracking-wide">
               Products
-            </Link>
+            </Link> */}
             <button
               className="text-[16px] tracking-wide"
               onClick={handleScrollToFooter}
@@ -100,12 +100,12 @@ const Navbar = () => {
           >
             Services
           </Link>
-          <Link
+          {/* <Link
             href="/products"
             className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
           >
             Products
-          </Link>
+          </Link> */}
           <button
             className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
             onClick={handleScrollToFooter}

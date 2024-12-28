@@ -19,18 +19,6 @@ const Footer = () => {
             className="h-auto w-[40%] -ml-2 md:ml-0 lg:w-[30%]"
           />
 
-          <div className="flex gap-4 my-5 px-3">
-            <Image
-              src={CeritificationLogoPCI}
-              alt="footer logo"
-              className="h-auto w-[130px]"
-            />
-            <Image
-              src={CeritificationLogoISO}
-              alt="footer logo"
-              className="h-auto w-[100%]"
-            />
-          </div>
           <div className="w-full px-2 flex flex-col justify-between items-start mx-auto mt-4 text-left mb-2 text-gray-500 text-md ">
             <div className="flex flex-col justify-start items-start">
               <div>
@@ -62,7 +50,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-[4em] pt-6 lg:pt-0">
+        <div className="">
           {/* <div>
             <h6 className="text-lg font-semibold mb-3 md:mb-6">Products</h6>
             <div className="flex flex-col justify-start items-start gap-y-2">
@@ -144,6 +132,18 @@ const Footer = () => {
               >
                 <FaInstagram size={14} />
               </a>
+            </div>
+            <div className="flex flex-row items-center gap-x-4">
+              <Image
+                src={CeritificationLogoPCI}
+                alt="footer logo"
+                className="h-auto w-[15%]"
+              />
+              <Image
+                src={CeritificationLogoISO}
+                alt="footer logo"
+                className="h-auto w-[15%]"
+              />
             </div>
           </div>
         </div>
