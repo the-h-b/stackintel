@@ -8,7 +8,7 @@ import ProductFooter from "../../components/(products)/ProductFooter";
 const page = () => {
   return (
     <>
-      <div className="bg-background-color overflow-hidden">
+      <div className="bg-background-color ">
         <ProductHeader />
         <ProductFeatures />
         <ProductItems />
