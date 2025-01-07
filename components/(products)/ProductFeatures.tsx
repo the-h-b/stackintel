@@ -23,13 +23,12 @@ export default function StackedStickySections() {
         {/* Left Content */}
         <div className="p-8 md:p-32">
           <h1 className="font-light text-3xl md:text-5xl leading-snug md:leading-tight text-white">
-            Lorem Ipsum is simply dummy text of the printing 1
+            Effortless Efficiency
           </h1>
           <hr className="w-[150px] md:w-[300px] my-4 md:my-8" />
           <p className="text-base md:text-lg mb-4 font-normal text-white">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
+            Streamline your workflow with intuitive tools that make complex
+            tasks simple.
           </p>
         </div>
 
@@ -54,13 +53,12 @@ export default function StackedStickySections() {
       >
         <div className="p-8 md:p-32">
           <h1 className="font-light text-3xl md:text-5xl leading-snug md:leading-tight text-white">
-            Lorem Ipsum is simply dummy text of the printing 2
+            Data-Driven Decisions
           </h1>
           <hr className="w-[150px] md:w-[300px] my-4 md:my-8" />
           <p className="text-base md:text-lg mb-4 font-normal text-white">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
+            Unlock the power of your data with real-time analytics and
+            actionable insights.
           </p>
         </div>
         <div className="grid place-items-center h-auto p-8">
@@ -83,13 +81,12 @@ export default function StackedStickySections() {
       >
         <div className="p-8 md:p-32">
           <h1 className="font-light text-3xl md:text-5xl leading-snug md:leading-tight text-white">
-            Lorem Ipsum is simply dummy text of the printing 3
+            Secure by Design
           </h1>
           <hr className="w-[150px] md:w-[300px] my-4 md:my-8" />
           <p className="text-base md:text-lg mb-4 font-normal text-white">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
+            Experience robust protection with enterprise-grade security features
+            built to safeguard your operations.
           </p>
         </div>
         <div className="grid place-items-center h-auto p-8">

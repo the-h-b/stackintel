@@ -8,24 +8,24 @@ const Component = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="my-auto">
             <h1 className="font-light text-2xl md:text-3xl text-white">
-              Lorem Ipsum is simply dummy text
+              Transforming Fintech, One Solution at a Time
             </h1>
             <p className="text-gray-200 my-4 md:mb-16 text-base md:text-xl">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
+              At StackIntel, we empower businesses with secure, scalable, and
+              innovative payment solutions tailored to your needs. Join us in
+              revolutionizing the future of financial technology.
             </p>
             <a
               href="#"
               className="inline-block px-4 py-3 border border-white text-white rounded text-sm md:text-base"
             >
-              Action Button
+              Learn More
             </a>
           </div>
           <div className="flex justify-center md:justify-end">
             <Image
               src={ProductFooterImg}
-              alt="Product Footer"
+              alt="Innovative Fintech Solutions"
               className="h-auto w-[100%] md:w-[60%]"
             />
           </div>

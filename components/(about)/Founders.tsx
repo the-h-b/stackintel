@@ -3,35 +3,35 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ClientLogo1 from "../../assets/about/logo1.png";
-import ClientLogo2 from "../../assets/about/logo2.png";
-import ClientLogo3 from "../../assets/about/logo3.png";
+import FounderImg1 from "../../assets/about/founder1.jpeg";
+import FounderImg2 from "../../assets/about/founder2.jpeg";
+import FounderImg3 from "../../assets/about/founder3.jpeg";
 import { FaLinkedinIn } from "react-icons/fa";
 
 const ScaleItems = [
   {
     id: 1,
-    name: "Salil Chaturvedi",
-    title: "Founder & CEO",
+    name: "Pankaj Gupta",
+    title: "Founder & CSO",
     description:
-      "Founded and exited two startups, taking them from product stage to successful exitStrong background in both sales strategy and product developmentDeeply embedded in the Fintech community, with extensive connections to large Fintech clients and industry leaders",
-    image: ClientLogo1,
+      "A proven track record in operations and strategy ensures that StackIntel runs like a well-oiled machine",
+    image: FounderImg1,
   },
   {
     id: 2,
     name: "Salil Chaturvedi",
     title: "Founder & CEO",
     description:
-      "Founded and exited two startups, taking them from product stage to successful exitStrong background in both sales strategy and product developmentDeeply embedded in the Fintech community, with extensive connections to large Fintech clients and industry leaders",
-    image: ClientLogo2,
+      "With a decade of experience in fintech, Salil’s leadership drives StackIntel to continually innovate and deliver.",
+    image: FounderImg2,
   },
   {
     id: 3,
-    name: "Salil Chaturvedi",
-    title: "Founder & CEO",
+    name: "Gaurav Gupta",
+    title: "Founder & CPO",
     description:
-      "Founded and exited two startups, taking them from product stage to successful exitStrong background in both sales strategy and product developmentDeeply embedded in the Fintech community, with extensive connections to large Fintech clients and industry leaders",
-    image: ClientLogo3,
+      "Bringing creativity and strategy together, Gaurav leads our efforts to create impactful campaigns and build a global brand.",
+    image: FounderImg3,
   },
 ];
 
@@ -105,7 +105,7 @@ const Founders = () => {
                 alt={`${item.title} logo`}
                 height={200}
                 width={200}
-                className="h-auto w-32 lg:w-24 bg-gray-100 mb-6"
+                className="h-auto w-32 lg:w-24 bg-gray-100 mb-6 rounded-full"
               />
             </div>
             <div className="flex flex-col justify-center items-center gap-y-4 w-full">

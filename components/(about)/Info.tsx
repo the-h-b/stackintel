@@ -44,26 +44,31 @@ const Info = () => {
             className="text-lg text-primaryColor font-semibold"
             variants={itemVariants}
           >
-            Notre Vision
+            Our Vision
           </motion.h1>
           <motion.p
             className="text-gray-800 mt-2 text-2xl font-semibold leading-normal"
             variants={itemVariants}
           >
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
+            At StackIntel, our vision is to transform the fintech industry by
+            creating secure, scalable, and innovative payment solutions that
+            empower businesses worldwide.
           </motion.p>
         </motion.div>
         <div className="pt-8 md:pt-0 w-[100%] md:w-[50%]">
           <p className="text-gray-700">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500sLorem Ipsum is simply dummy text of the printing
-            and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500sLorem Ipsum is simply dummy
-            text of the printing and typesetting industry. Lorem Ipsum has been
-            the industry's standard dummy text ever since the 1500s
+            StackIntel is committed to revolutionizing payment processing with
+            cutting-edge solutions for prepaid, debit, and credit cards. We
+            deliver seamless integration, operational efficiency, and advanced
+            fraud management, ensuring transparency and reliability for all our
+            clients. Our mission is to empower businesses by offering end-to-end
+            solutions tailored to their unique needs.
+          </p>
+          <p className="text-gray-700 mt-4">
+            With a global reach and a dedication to innovation, StackIntel
+            enables faster go-to-market solutions and a customer-first approach,
+            making us a trusted partner for businesses across the fintech
+            spectrum.
           </p>
         </div>
       </motion.div>

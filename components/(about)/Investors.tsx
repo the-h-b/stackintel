@@ -3,35 +3,27 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ClientLogo1 from "../../assets/about/logo1.png";
-import ClientLogo2 from "../../assets/about/logo2.png";
-import ClientLogo3 from "../../assets/about/logo3.png";
+import FounderImg1 from "../../assets/about/founder1.jpeg";
+import FounderImg2 from "../../assets/about/founder2.jpeg";
+import FounderImg3 from "../../assets/about/founder3.jpeg";
 import { FaLinkedinIn } from "react-icons/fa";
 
 const ScaleItems = [
   {
     id: 1,
-    name: "Salil Chaturvedi",
-    title: "Founder & CEO",
+    name: "Naveen Suraj",
+    title: "Lead Advisor & Investor",
     description:
-      "Founded and exited two startups, taking them from product stage to successful exitStrong background in both sales strategy and product developmentDeeply embedded in the Fintech community, with extensive connections to large Fintech clients and industry leaders",
-    image: ClientLogo1,
+      "A financial expert with a passion for growth, Naveen brings invaluable insights to StackIntel.",
+    image: FounderImg1,
   },
   {
     id: 2,
-    name: "Salil Chaturvedi",
-    title: "Founder & CEO",
+    name: "CA Anuj Ghelot",
+    title: "Early Angel Investor & Advisor",
     description:
-      "Founded and exited two startups, taking them from product stage to successful exitStrong background in both sales strategy and product developmentDeeply embedded in the Fintech community, with extensive connections to large Fintech clients and industry leaders",
-    image: ClientLogo2,
-  },
-  {
-    id: 3,
-    name: "Salil Chaturvedi",
-    title: "Founder & CEO",
-    description:
-      "Founded and exited two startups, taking them from product stage to successful exitStrong background in both sales strategy and product developmentDeeply embedded in the Fintech community, with extensive connections to large Fintech clients and industry leaders",
-    image: ClientLogo3,
+      "Anuj’s expertise in financial strategy ensures our success in navigating complex markets.",
+    image: FounderImg2,
   },
 ];
 
@@ -105,7 +97,7 @@ const Investors = () => {
                 alt={`${item.title} logo`}
                 height={200}
                 width={200}
-                className="h-auto w-32 lg:w-24 bg-gray-100 mb-6"
+                className="h-auto w-32 lg:w-24 bg-gray-100 mb-6 rounded-full"
               />
             </div>
             <div className="flex flex-col justify-center items-center gap-y-4 w-full">

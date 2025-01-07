@@ -45,7 +45,7 @@ const Navbar = () => {
           />
 
           <div className="hidden lg:flex flex-row justify-center items-center gap-x-[4em]">
-            <Link href="#about-section" className="text-[16px] tracking-wide">
+            <Link href="/about" className="text-[16px] tracking-wide">
               About Us
             </Link>
             <Link
@@ -57,9 +57,9 @@ const Navbar = () => {
             <Link href="#scale-section" className="text-[16px] tracking-wide">
               Services
             </Link>
-            {/* <Link href="/products" className="text-[16px] tracking-wide">
+            <Link href="/products" className="text-[16px] tracking-wide">
               Products
-            </Link> */}
+            </Link>
             <button
               className="text-[16px] tracking-wide"
               onClick={handleScrollToFooter}

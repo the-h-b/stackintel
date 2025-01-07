@@ -8,23 +8,23 @@ import ScaleLogo from "../../assets/static/scale.png";
 const ScaleItems = [
   {
     id: 1,
-    title: "Confort",
+    title: "Trust",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "We prioritize building lasting relationships with our clients by ensuring transparency, reliability, and ethical practices at every step.",
     image: ScaleLogo,
   },
   {
     id: 2,
-    title: "Confort",
+    title: "Innovation",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "Driving progress in the fintech industry by delivering cutting-edge solutions tailored to meet the dynamic needs of businesses worldwide.",
     image: ScaleLogo,
   },
   {
     id: 3,
-    title: "Confort",
+    title: "Customer-Centricity",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "We design our services with a user-first approach, ensuring a seamless, intuitive, and impactful experience for our customers.",
     image: ScaleLogo,
   },
 ];
@@ -65,13 +65,13 @@ const Section3 = () => {
         variants={containerVariants}
       >
         <motion.p className="text-lg text-primaryColor" variants={itemVariants}>
-          Nos Valeurs
+          Our Core Values
         </motion.p>
         <motion.p
           className="text-4xl text-center lg:text-left font-light"
           variants={itemVariants}
         >
-          Lorem Ipsum is simply the dummy text of printing
+          Empowering Fintech with Integrity, Innovation, and Customer-Centricity
         </motion.p>
       </motion.div>
 

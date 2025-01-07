@@ -12,9 +12,9 @@ const page = () => {
       <Hero />
       <Info />
       <Section3 />
-      <Client />
+      {/* <Client /> */}
       <Founders />
-      <Investors />
+      {/* <Investors /> */}
     </div>
   );
 };
