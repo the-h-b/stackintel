@@ -11,14 +11,6 @@ import { FaLinkedinIn } from "react-icons/fa";
 const ScaleItems = [
   {
     id: 1,
-    name: "Pankaj Gupta",
-    title: "Founder & CSO",
-    description:
-      "A proven track record in operations and strategy ensures that StackIntel runs like a well-oiled machine",
-    image: FounderImg1,
-  },
-  {
-    id: 2,
     name: "Salil Chaturvedi",
     title: "Founder & CEO",
     description:
@@ -26,9 +18,18 @@ const ScaleItems = [
     image: FounderImg2,
   },
   {
+    id: 2,
+    name: "Pankaj Gupta",
+    title: "Co-Founder & CSO",
+    description:
+      "A proven track record in operations and strategy ensures that StackIntel runs like a well-oiled machine",
+    image: FounderImg1,
+  },
+
+  {
     id: 3,
     name: "Gaurav Gupta",
-    title: "Founder & CPO",
+    title: "Co-Founder & CPO",
     description:
       "Bringing creativity and strategy together, Gaurav leads our efforts to create impactful campaigns and build a global brand.",
     image: FounderImg3,

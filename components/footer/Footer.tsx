@@ -7,10 +7,10 @@ import FooterLogo from "../../assets/static/stacklogo.png";
 
 const Footer = () => {
   return (
-    <footer className="max-w-7xl mx-auto px-2  border-t-2 border-gray-300 mt-[6em] py-[3em] lg:py-[4em]">
+    <footer className="max-w-7xl mx-auto px-2 border-t-2 border-gray-300 mt-[6em] py-[3em] lg:py-[4em]">
       {/* Logo */}
-      <div className="flex flex-col lg:flex-row lg:justify-between items-start">
-        <div className="flex flex-col justify-start items-start">
+      <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-start w-full">
+        <div className="flex flex-col ">
           <Image
             src={FooterLogo}
             alt="footer logo"
@@ -50,104 +50,52 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="">
-          {/* <div>
-            <h6 className="text-lg font-semibold mb-3 md:mb-6">Products</h6>
-            <div className="flex flex-col justify-start items-start gap-y-2">
-              <Link
-                href="#"
-                className="text-gray-600 text-sm hover:text-gray-800"
-              >
-                Debit/credit card Insurance
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 text-sm hover:text-gray-800"
-              >
-                Card Processor
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 text-sm hover:text-gray-800"
-              >
-                Fraud Detection
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 text-sm hover:text-gray-800"
-              >
-                Use Cases
-              </Link>
-            </div>
+
+        <div className="flex flex-col justify-end items-end gap-x-4 gap-y-2 ">
+          <p className="text-gray-700 font-medium">
+            Follow us on our social media
+          </p>
+          <div className="flex flex-row justify-center items-center gap-x-4">
+            <a
+              href="https://www.facebook.com/profile.php?id=61567864861364"
+              className="text-blue-800 bg-gray-300 rounded-full p-[8px] hover:text-gray-900 cursor-pointer"
+            >
+              <FaFacebookF size={14} />
+            </a>
+            <a
+              href="https://x.com/stackintelhq?s=11"
+              className="text-blue-800 bg-gray-300 rounded-full p-[8px] hover:text-gray-900 cursor-pointer"
+            >
+              <FaXTwitter size={14} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/stackintelofficial/about/?viewAsMember=true"
+              className="text-blue-800 bg-gray-300 rounded-full p-[8px] hover:text-gray-900 cursor-pointer"
+            >
+              <FaLinkedinIn size={14} />
+            </a>
+            <a
+              href="https://www.instagram.com/stackintelofficial/"
+              className="text-blue-800 bg-gray-300 rounded-full p-[8px] hover:text-gray-900 cursor-pointer"
+            >
+              <FaInstagram size={14} />
+            </a>
           </div>
-          <div>
-            <h6 className="text-lg font-semibold mb-6">Company</h6>
-            <div className="flex flex-col justify-start items-start gap-y-2">
-              <Link
-                href="#"
-                className="text-gray-600 text-sm hover:text-gray-800"
-              >
-                About
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 text-sm hover:text-gray-800"
-              >
-                Team
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-600 text-sm hover:text-gray-800"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div> */}
-          <div className="flex flex-col justify-start items-start gap-x-4 gap-y-2">
-            <p className="text-gray-700 font-medium">
-              Follow us on our social media
-            </p>
-            <div className="flex flex-row justify-start items-start gap-x-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567864861364"
-                className="text-blue-800 bg-gray-300 rounded-full p-[8px] hover:text-gray-900 cursor-pointer"
-              >
-                <FaFacebookF size={14} />
-              </a>
-              <a
-                href="https://x.com/stackintelhq?s=11"
-                className="text-blue-800 bg-gray-300 rounded-full p-[8px] hover:text-gray-900 cursor-pointer"
-              >
-                <FaXTwitter size={14} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/stackintelofficial/about/?viewAsMember=true"
-                className="text-blue-800 bg-gray-300 rounded-full p-[8px] hover:text-gray-900 cursor-pointer"
-              >
-                <FaLinkedinIn size={14} />
-              </a>
-              <a
-                href="https://www.instagram.com/stackintelofficial/"
-                className="text-blue-800 bg-gray-300 rounded-full p-[8px] hover:text-gray-900 cursor-pointer"
-              >
-                <FaInstagram size={14} />
-              </a>
-            </div>
-            <div className="flex flex-row items-center gap-x-4">
-              <Image
-                src={CeritificationLogoPCI}
-                alt="footer logo"
-                className="h-auto w-[15%]"
-              />
-              <Image
-                src={CeritificationLogoISO}
-                alt="footer logo"
-                className="h-auto w-[15%]"
-              />
-            </div>
+          <div className="flex flex-row justify-end items-end gap-x-4">
+            <Image
+              src={CeritificationLogoPCI}
+              alt="footer logo"
+              className="h-auto w-[15%]"
+            />
+            <Image
+              src={CeritificationLogoISO}
+              alt="footer logo"
+              className="h-auto w-[15%]"
+            />
           </div>
         </div>
       </div>
+
       <div className="flex flex-col md:flex-row justify-between w-full items-center mt-[4em]">
         <p className="text-gray-700 text-sm">
           © Stackintel, 2024. All rights reserved.

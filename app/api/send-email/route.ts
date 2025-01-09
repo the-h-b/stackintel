@@ -16,18 +16,16 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     const { name, companyName, email, phoneNumber, designation, reason } = data;
 
-    // Create transporter with TypeScript type safety
     const transporter: Transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST as string,
       port: parseInt(process.env.SMTP_PORT || "587", 10),
-      secure: process.env.SMTP_SECURE === "true", // Boolean cast
+      secure: process.env.SMTP_SECURE === "true",
       auth: {
         user: process.env.SMTP_USER as string,
         pass: process.env.SMTP_PASS as string,
       },
     });
 
-    // Define mail options for recipients
     const mailOptionsToRecipients = {
       from: `"Website Contact Form" <${process.env.SMTP_USER}>`,
       to: `pankaj@stackintel.in,gaurav@stackintel.in,salil@stackintel.in,deep.hakani@stackintel.in,abhay.desai@stackintel.in`,
@@ -41,7 +39,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
         Reason: ${reason}`,
     };
 
-    // Define mail options for sender
     const mailOptionsToSender = {
       from: `"StackIntel Team" <${process.env.SMTP_USER}>`,
       to: email,
@@ -53,7 +50,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       The StackIntel Team`,
     };
 
-    // Send emails concurrently
     await Promise.all([
       transporter.sendMail(mailOptionsToRecipients),
       transporter.sendMail(mailOptionsToSender),
