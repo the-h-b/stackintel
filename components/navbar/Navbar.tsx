@@ -60,12 +60,12 @@ const Navbar = () => {
             <Link href="/products" className="text-[16px] tracking-wide">
               Products
             </Link>
-            <button
+            <Link
               className="text-[16px] tracking-wide"
-              onClick={handleScrollToFooter}
+              href='/contacts'
             >
               Contact Us
-            </button>
+            </Link>
           </div>
 
           {/* Get Started Button */}
@@ -106,12 +106,12 @@ const Navbar = () => {
           >
             Products
           </Link> */}
-          <button
+          <Link
             className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
-            onClick={handleScrollToFooter}
+            href='/contacts'
           >
             Contact Us
-          </button>
+          </Link>
         </div>
       )}
 
