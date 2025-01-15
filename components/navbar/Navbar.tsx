@@ -15,14 +15,6 @@ const Navbar = () => {
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
-
-  const handleScrollToFooter = () => {
-    const footerSection = document.getElementById("footer-section");
-    if (footerSection) {
-      footerSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
@@ -36,13 +28,15 @@ const Navbar = () => {
       <nav className="sticky top-0 bg-[#EFF1F5]/25 backdrop-blur-md border border-white w-full h-auto z-[999]">
         <div className="max-w-7xl mx-auto px-2 flex flex-row justify-between items-center h-12 md:h-20">
           {/* Hero Image */}
-          <Image
-            src={HeroImage}
-            alt="hero-image"
-            height={200}
-            width={500}
-            className="h-auto w-[35%] md:w-[20%] lg:w-[15%]"
-          />
+          <Link href="/" className="w-[20%]">
+            <Image
+              src={HeroImage}
+              alt="hero-image"
+              height={200}
+              width={500}
+              className="h-auto w-[35%] md:w-[20%] lg:w-[70%]"
+            />
+          </Link>
 
           <div className="hidden lg:flex flex-row justify-center items-center gap-x-[4em]">
             <Link href="/about" className="text-[16px] tracking-wide">
@@ -60,10 +54,7 @@ const Navbar = () => {
             <Link href="/products" className="text-[16px] tracking-wide">
               Products
             </Link>
-            <Link
-              className="text-[16px] tracking-wide"
-              href='/contacts'
-            >
+            <Link className="text-[16px] tracking-wide" href="/contacts">
               Contact Us
             </Link>
           </div>
@@ -108,7 +99,7 @@ const Navbar = () => {
           </Link> */}
           <Link
             className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
-            href='/contacts'
+            href="/contacts"
           >
             Contact Us
           </Link>
