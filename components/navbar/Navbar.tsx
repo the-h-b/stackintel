@@ -42,7 +42,7 @@ const Navbar = () => {
               alt="hero-image"
               height={200}
               width={500}
-              className="h-auto w-[35%] md:w-[20%] lg:w-[15%] cursor-pointer"
+              className="h-auto w-[35%] md:w-[70%] lg:w-[65%] cursor-pointer"
             />
           </Link>
 
