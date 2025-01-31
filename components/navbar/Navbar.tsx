@@ -24,7 +24,11 @@ const Navbar = () => {
   };
 
   const handleLogin = () => {
-    window.location.href = "https://corporates.stackintel.in/";
+    window.open(
+      "https://corporates.stackintel.in/",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   return (
