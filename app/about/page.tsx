@@ -14,7 +14,7 @@ const page = () => {
       <Section3 />
       {/* <Client /> */}
       <Founders />
-      {/* <Investors /> */}
+      <Investors />
     </div>
   );
 };

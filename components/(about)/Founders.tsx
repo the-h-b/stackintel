@@ -88,9 +88,11 @@ const Founders = () => {
           className="text-md text-center lg:text-left text-gray-600"
           variants={itemVariants}
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s
+          Our founders believe in the power of integrity and transparency,
+          ensuring that every aspect of our business operates with the highest
+          ethical standards. They are committed to fostering an environment
+          where every team member feels valued and empowered to contribute their
+          best work.{" "}
         </motion.p>
       </motion.div>
 

@@ -3,27 +3,17 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import FounderImg1 from "../../assets/about/founder1.jpeg";
-import FounderImg2 from "../../assets/about/founder2.jpeg";
-import FounderImg3 from "../../assets/about/founder3.jpeg";
+import InvestorImg1 from "../../assets/about/investor1.jpg";
 import { FaLinkedinIn } from "react-icons/fa";
 
 const ScaleItems = [
   {
     id: 1,
-    name: "Naveen Suraj",
-    title: "Lead Advisor & Investor",
-    description:
-      "A financial expert with a passion for growth, Naveen brings invaluable insights to StackIntel.",
-    image: FounderImg1,
-  },
-  {
-    id: 2,
-    name: "CA Anuj Ghelot",
-    title: "Early Angel Investor & Advisor",
-    description:
-      "Anuj’s expertise in financial strategy ensures our success in navigating complex markets.",
-    image: FounderImg2,
+    name: "Anuj Golecha",
+    title: "Co-Founder at Beams Fintech Fund",
+    link: "https://www.linkedin.com/in/anujgolecha?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAABpEBuIBsFC9j6ts7imMXs32xMVbUi5ip0A&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Benv%2FGlkPRjGlC3IF1LRfEA%3D%3D",
+    description: `Venture Catalysts, and 9 Unicorns Accelerator Fund BharatPe, Flobiz, and Dukaan Co-founded Creditwise Capital, focused on fintech for two decades "40 under 40" by AIWMI; recognized by PM Modi under NITI Aayog`,
+    image: InvestorImg1,
   },
 ];
 
@@ -69,15 +59,16 @@ const Investors = () => {
           className="text-4xl text-center lg:text-left font-light"
           variants={itemVariants}
         >
-          Meet the Visionaries behind Stackintel
+          Investors and Experts Who Believe in Our Vision
         </motion.p>
         <motion.p
           className="text-md text-center lg:text-left text-gray-600"
           variants={itemVariants}
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s
+          We are backed by visionary investors and industry experts who share
+          our commitment to innovation and growth. Their support and insights
+          drive us forward, helping us shape the future with confidence and
+          purpose.
         </motion.p>
       </motion.div>
 
@@ -117,7 +108,9 @@ const Investors = () => {
                   </motion.p>
                 </div>
                 <motion.p className="text-primaryColor border rounded-full border-primaryColor p-2">
-                  <FaLinkedinIn size={20} />
+                  <a href={item.link} target="_blank">
+                    <FaLinkedinIn size={20} />
+                  </a>
                 </motion.p>
               </motion.div>
               <motion.p

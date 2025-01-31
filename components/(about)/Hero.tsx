@@ -18,7 +18,7 @@ const Hero = () => {
         alt="about-image"
         height={500}
         width={500}
-        className="h-auto w-[80%] md:w-[60%] lg:w-[30%] mt-[2em] md:mt-[4em]"
+        className="h-auto w-[80%] md:w-[60%] lg:w-[40%] mt-[2em] md:mt-[4em]"
       />
     </div>
   );
