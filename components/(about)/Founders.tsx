@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import FounderImg1 from "../../assets/about/founder1.jpeg";
 import FounderImg2 from "../../assets/about/founder2.jpeg";
 import FounderImg3 from "../../assets/about/founder3.jpeg";
@@ -13,6 +14,7 @@ const ScaleItems = [
     id: 1,
     name: "Salil Chaturvedi",
     title: "Founder & CEO",
+    link: "https://www.linkedin.com/in/salil-chaturvedi-492922300?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAE0F3i4BW3wq3CDoIqXKS93col3OqTdR0_U&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BdYWIuwgHQ1alCxLJg%2F7HTA%3D%3D",
     description:
       "With a decade of experience in fintech, Salil’s leadership drives StackIntel to continually innovate and deliver.",
     image: FounderImg2,
@@ -21,6 +23,7 @@ const ScaleItems = [
     id: 2,
     name: "Pankaj Gupta",
     title: "Co-Founder & CSO",
+    link: "https://www.linkedin.com/in/kumarpankaj1985?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAPNQIUBwwWG1ayorjwAMqEG8E0bY1C2uQ4&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BYCiqi8%2FiSPyGB7WS6aK8qw%3D%3D",
     description:
       "A proven track record in operations and strategy ensures that StackIntel runs like a well-oiled machine",
     image: FounderImg1,
@@ -30,6 +33,7 @@ const ScaleItems = [
     id: 3,
     name: "Gaurav Gupta",
     title: "Co-Founder & CPO",
+    link: "https://www.linkedin.com/in/gaurav-gupta-2ba14b36?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAd---4BMOAP2jEkPpsAyFwF5lyAe1nYLZ8&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BRD8v25csT4Sdktopz5oaLg%3D%3D",
     description:
       "Bringing creativity and strategy together, Gaurav leads our efforts to create impactful campaigns and build a global brand.",
     image: FounderImg3,
@@ -126,7 +130,9 @@ const Founders = () => {
                   </motion.p>
                 </div>
                 <motion.p className="text-primaryColor border rounded-full border-primaryColor p-2">
-                  <FaLinkedinIn size={20} />
+                  <a href={item.link} target="_blank">
+                    <FaLinkedinIn size={20} />
+                  </a>
                 </motion.p>
               </motion.div>
               <motion.p

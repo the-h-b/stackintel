@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   const handleLogin = () => {
-    window.location.href = "https://corporate.stackintel.in/";
+    window.location.href = "https://corporates.stackintel.in/";
   };
 
   return (
@@ -42,25 +42,48 @@ const Navbar = () => {
             />
           </Link>
 
-          <div className="hidden lg:flex flex-row justify-center items-center gap-x-[1.5em]">
-            <Link href="/about" className="text-[16px] tracking-wide">
+          <div className="hidden lg:flex flex-row justify-center items-center gap-x-6">
+            <Link
+              href="/about"
+              className="text-[16px] text-gray-700 hover:text-gray-900 transition-all tracking-wide"
+            >
               About Us
             </Link>
-            <Link href="/products" className="text-[16px] tracking-wide">
+            <Link
+              href="/products"
+              className="text-[16px] text-gray-700 hover:text-gray-900 transition-all tracking-wide"
+            >
               Products
             </Link>
-            <Link className="text-[16px] tracking-wide" href="/contacts">
+            <a
+              href="https://developer.stackintel.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
+            >
+              Developers
+            </a>
+            <Link
+              className="text-[16px] text-gray-700 hover:text-gray-900 transition-all tracking-wide"
+              href="/contacts"
+            >
               Contact Us
             </Link>
-            <a
-              href="https://stackintel-team.postman.co/workspace/Team-Workspace~37e40ee7-a79a-41f7-8c91-53e7916c54fa/collection/39119156-c2b545aa-930e-4dba-be90-bcfec7fa0890"
-              className="text-[16px] tracking-wide"
+
+            {/* Option B: Keep Button and Redirect Using window.open */}
+
+            <button
+              onClick={() =>
+                window.open(
+                  "https://corporates.stackintel.in/",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+              className="hidden lg:block text-gray-700 hover:text-gray-900 transition-all"
             >
-              Developer
-            </a>
-            <div className="hidden lg:flex items-center mr-6">
-              <button onClick={handleOpenModal}>Get Started</button>
-            </div>
+              Get Started
+            </button>
           </div>
 
           {/* Login Button */}
@@ -89,18 +112,43 @@ const Navbar = () => {
           >
             Products
           </Link>
+          <a
+            href="http://45.119.13.152:5000/apix/cms"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
+          >
+            Developers
+          </a>
           <Link
             className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
             href="/contacts"
           >
             Contact Us
           </Link>
-          <a
-            href="https://stackintel-team.postman.co/workspace/Team-Workspace~37e40ee7-a79a-41f7-8c91-53e7916c54fa/collection/39119156-c2b545aa-930e-4dba-be90-bcfec7fa0890"
-            className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all tracking-wide"
+
+          {/* Option A: Replace Button with Anchor Tag */}
+          <div className="hidden lg:flex items-center mr-6">
+            <a
+              href="https://corporate.stackintel.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            >
+              Get Started
+            </a>
+          </div>
+
+          {/* Option B: Keep Button and Redirect Using window.open */}
+          {/* 
+          <button
+            onClick={() => window.open("https://corporate.stackintel.in/", "_blank", "noopener,noreferrer")}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
           >
-            Developer
-          </a>
+            Get Started
+          </button>
+          */}
+
           <Button buttonText={"Login"} onClick={handleLogin} />
         </div>
       )}
