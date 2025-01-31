@@ -73,13 +73,7 @@ const Navbar = () => {
             {/* Option B: Keep Button and Redirect Using window.open */}
 
             <button
-              onClick={() =>
-                window.open(
-                  "https://corporates.stackintel.in/",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
+              onClick={handleOpenModal}
               className="hidden lg:block text-gray-700 hover:text-gray-900 transition-all"
             >
               Get Started
@@ -130,9 +124,7 @@ const Navbar = () => {
           {/* Option A: Replace Button with Anchor Tag */}
           <div className="hidden lg:flex items-center mr-6">
             <a
-              href="https://corporate.stackintel.in/"
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={handleOpenModal}
               className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
             >
               Get Started
