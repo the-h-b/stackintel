@@ -23,6 +23,10 @@ const Navbar = () => {
     setMobileMenu(!mobileMenu);
   };
 
+  const handleLogin = () => {
+    window.location.href = "https://corporate.stackintel.in/";
+  };
+
   return (
     <>
       <nav className="sticky top-0 bg-[#EFF1F5]/25 backdrop-blur-md border border-white w-full h-auto z-[999]">
@@ -38,7 +42,7 @@ const Navbar = () => {
             />
           </Link>
 
-          <div className="hidden lg:flex flex-row justify-center items-center gap-x-[4em]">
+          <div className="hidden lg:flex flex-row justify-center items-center gap-x-[1.5em]">
             <Link href="/about" className="text-[16px] tracking-wide">
               About Us
             </Link>
@@ -48,11 +52,20 @@ const Navbar = () => {
             <Link className="text-[16px] tracking-wide" href="/contacts">
               Contact Us
             </Link>
+            <a
+              href="https://stackintel-team.postman.co/workspace/Team-Workspace~37e40ee7-a79a-41f7-8c91-53e7916c54fa/collection/39119156-c2b545aa-930e-4dba-be90-bcfec7fa0890"
+              className="text-[16px] tracking-wide"
+            >
+              Developer
+            </a>
+            <div className="hidden lg:flex items-center mr-6">
+              <button onClick={handleOpenModal}>Get Started</button>
+            </div>
           </div>
 
-          {/* Get Started Button */}
+          {/* Login Button */}
           <div className="hidden lg:flex items-center">
-            <Button buttonText={"Get Started"} onClick={handleOpenModal} />
+            <Button buttonText={"Login"} onClick={handleLogin} />
           </div>
 
           {/* Hamburger menu */}
@@ -63,7 +76,7 @@ const Navbar = () => {
       </nav>
 
       {mobileMenu && (
-        <div className="absolute top-24 right-2 border border-white p-6 rounded-lg lg:hidden flex flex-col justify-center items-center gap-y-[1em]">
+        <div className="absolute w-[40%] top-16 right-0 border border-white p-6 rounded-lg lg:hidden bg-gray-100 flex flex-col justify-center items-center gap-y-[1em] shadow-md">
           <Link
             href="/about"
             className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all"
@@ -82,6 +95,13 @@ const Navbar = () => {
           >
             Contact Us
           </Link>
+          <a
+            href="https://stackintel-team.postman.co/workspace/Team-Workspace~37e40ee7-a79a-41f7-8c91-53e7916c54fa/collection/39119156-c2b545aa-930e-4dba-be90-bcfec7fa0890"
+            className="text-[16px] tracking-wide text-gray-700 hover:text-gray-900 transition-all tracking-wide"
+          >
+            Developer
+          </a>
+          <Button buttonText={"Login"} onClick={handleLogin} />
         </div>
       )}
 
