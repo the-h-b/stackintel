@@ -25,7 +25,7 @@ const Navbar = () => {
 
   const handleLogin = () => {
     window.open(
-      "https://corporates.stackintel.in/",
+      "http://corporates.stackintel.in/",
       "_blank",
       "noopener,noreferrer"
     );
