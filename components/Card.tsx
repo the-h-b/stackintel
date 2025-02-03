@@ -25,7 +25,7 @@ const Card = ({ image, title, description }: CardProps) => {
   };
 
   return (
-    <div className="relative overflow-hidden flex flex-col items-center w-[300px] h-[450px] rounded-lg border border-white backdrop-blur-md bg-white/25 px-8 py-[2em]">
+    <div className="relative overflow-hidden flex flex-col items-center w-[300px] h-[500px] rounded-lg border border-white backdrop-blur-md bg-white/25 px-8 py-[2em]">
       {/* Image Section */}
       <div className="h-auto w-[90%] overflow-hidden rounded-md mb-4">
         <Image
@@ -36,7 +36,7 @@ const Card = ({ image, title, description }: CardProps) => {
           className="object-cover w-full h-full"
         />
       </div>
-      <div className="absolute top-56 left-6 w-[90%]">
+      <div className="absolute top-64 left-6 w-[90%]">
         {/* Title with Animation */}
         <motion.p
           className="text-gray-950 text-left font-normal text-xl mb-2"
