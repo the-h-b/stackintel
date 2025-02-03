@@ -3,32 +3,55 @@
 import React from "react";
 import Image from "next/image";
 import Card from "@/components/Card";
-import ServiceImage1 from "../../../assets/static/services/service1.svg";
-import ServiceImage2 from "../../../assets/static/services/service2.svg";
-import ServiceImage3 from "../../../assets/static/services/service3.svg";
+import ServiceImage1 from "../../../assets/static/services/service1.png";
+import ServiceImage2 from "../../../assets/static/services/service2.png";
+import ServiceImage3 from "../../../assets/static/services/service3.png";
+import ServiceImage4 from "../../../assets/static/services/service4.png";
+import ServiceImage5 from "../../../assets/static/services/service5.png";
+import ServiceImage6 from "../../../assets/static/services/service6.png";
 import { motion } from "framer-motion";
 
 const cardContents = [
   {
     id: 1,
-    title: "Instant Card Insurance",
-    description:
-      "Issue prepaid and debit cards instantly, at scale, for any customer base.",
+    title: "Prepaid Card Management",
+    description: `Enable seamless issuance, management, and transaction processing for prepaid cards. Our platform supports multiple use cases, including gift cards, payroll cards, and digital wallets, ensuring flexibility, compliance, and real-time control.`,
     image: ServiceImage1,
   },
   {
     id: 2,
-    title: "Real-Time Data Insights",
+    title: "Card Issuer Switch",
     description:
-      "Access multi-layered, enriched data for actionable insights and customer connection.",
-    image: ServiceImage2,
+      "A powerful, scalable, and secure switching platform that enables seamless authorization, routing, and transaction processing between banks, networks, and fintechs. Ensure high availability, low latency, and superior performance for all card transactions.",
+    image: ServiceImage6,
   },
   {
     id: 3,
-    title: "Fraud Prevention",
+    title: "Access Control",
     description:
-      "Comprehensive encryption ensures your business is protected at all stages.",
+      "Enhance security with robust access control solutions for banking and financial applications. Implement multi-factor authentication, biometric verification, and tokenized transactions to safeguard sensitive data and ensure compliance.",
+    image: ServiceImage5,
+  },
+  {
+    id: 4,
+    title: "Fraud & Risk Management",
+    description:
+      "Mitigate fraud risks with AI-powered transaction monitoring and real-time anomaly detection. Our system continuously analyzes patterns to detect suspicious activities, prevent fraud, and protect customer trust.",
+    image: ServiceImage2,
+  },
+  {
+    id: 5,
+    title: "Banking as a Service",
+    description:
+      "Launch banking products with ease using our comprehensive BaaS platform. From account management to payment processing, we provide seamless API-driven banking solutions for fintechs, corporates, and enterprises.",
     image: ServiceImage3,
+  },
+  {
+    id: 6,
+    title: "Corporate Expense Management System",
+    description:
+      "Simplify corporate spending with a smart, automated expense management platform. Gain real-time insights, set spending limits, and streamline approvals for better financial control and efficiency",
+    image: ServiceImage4,
   },
 ];
 
