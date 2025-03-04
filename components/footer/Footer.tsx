@@ -4,6 +4,7 @@ import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import CeritificationLogoPCI from "../../assets/static/certification_logo_pic.png";
 import CeritificationLogoISO from "../../assets/static/certification_logo_iso.png";
 import FooterLogo from "../../assets/static/stacklogo.png";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -98,11 +99,15 @@ const Footer = () => {
 
       <div className="flex flex-col md:flex-row justify-between w-full items-center mt-[4em]">
         <p className="text-gray-700 text-sm">
-          © Stackintel, 2024. All rights reserved.
+          © Stackintel, 2025. All rights reserved.
         </p>
         <div className="flex flex-row justify-evenly items-center gap-x-4">
-          <p className="text-gray-500 text-sm">Legal Notice</p>
-          <p className="text-gray-500 text-sm">Privacy Policy</p>
+          <Link href="/terms-and-conditions" className="text-gray-500 text-sm">
+            Terms and Conditions
+          </Link>
+          <Link href="/privacy-policy" className="text-gray-500 text-sm">
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>
