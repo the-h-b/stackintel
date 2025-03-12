@@ -87,15 +87,13 @@ const Hero = () => {
       />
 
       {/* Right Column */}
-      <div className="w-full md:w-[90%]">
-        <video
-          src="/atm-alpha.webm"
-          autoPlay
-          loop
-          muted
-          className="h-auto w-[100%]"
-        />
-      </div>
+      <video autoPlay loop muted className="w-full md:w-[70%]">
+        {/* For browsers that support WebM (e.g. Chrome on Android) */}
+        <source src="/atm-alpha.webm" type="video/webm" />
+        {/* For iOS Safari which supports MOV (or HEVC with alpha on iOS 13+) */}
+        <source src="/atm-alpha.mov" type="video/quicktime" />
+        Your browser does not support the video tag.
+      </video>
       <PopupForm
         isModalOpen={isModalOpen}
         handleCloseModal={handleCloseModal}
