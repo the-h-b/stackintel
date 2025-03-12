@@ -86,12 +86,12 @@ const Footer = () => {
             <Image
               src={CeritificationLogoPCI}
               alt="footer logo"
-              className="h-auto w-[15%]"
+              className="h-auto w-[20%]"
             />
             <Image
               src={CeritificationLogoISO}
               alt="footer logo"
-              className="h-auto w-[15%]"
+              className="h-auto w-[20%]"
             />
           </div>
         </div>
