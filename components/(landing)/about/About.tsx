@@ -93,9 +93,7 @@ const About = () => {
         {/* Video Section */}
         <motion.div className="lg:w-[50%] mb-6 lg:mb-0" variants={itemVariants}>
           <video autoPlay loop muted className="h-auto w-[80%]">
-            <source src="/atm-alpha2.webm" type="video/webm" />
-            <source src="/atm-alpha2.mov" type="video/quicktime" />
-            Your browser does not support the video tag.
+            <source src="/atm-alpha2.mp4" type="video/mp4" />
           </video>
         </motion.div>
 
