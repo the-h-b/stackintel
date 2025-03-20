@@ -87,11 +87,8 @@ const Hero = () => {
       />
 
       {/* Right Column */}
-      <video autoPlay loop muted className="w-full md:w-[70%]">
-        {/* For browsers that support WebM (e.g. Chrome on Android) */}
-        <source src="/atm-alpha.webm" type="video/webm" />
-        {/* For iOS Safari which supports MOV (or HEVC with alpha on iOS 13+) */}
-        <source src="/atm-alpha.mov" type="video/quicktime" />
+      <video autoPlay loop muted className="w-full md:w-[50%]">
+        <source src="/atm-alpha.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <PopupForm
