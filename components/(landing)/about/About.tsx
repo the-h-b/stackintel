@@ -91,8 +91,15 @@ const About = () => {
         viewport={{ once: false, amount: 0.5 }}
       >
         {/* Video Section */}
-        <motion.div className="lg:w-[50%] mb-6 lg:mb-0" variants={itemVariants}>
-          <video autoPlay loop muted className="h-auto w-[80%]">
+        <motion.div className="w-full md:w-[50%] mb-6" variants={itemVariants}>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            webkit-playsinline="true"
+            className="h-auto w-full"
+          >
             <source src="/atm-alpha.mp4" type="video/mp4" />
           </video>
         </motion.div>
