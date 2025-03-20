@@ -93,7 +93,7 @@ const About = () => {
         {/* Video Section */}
         <motion.div className="lg:w-[50%] mb-6 lg:mb-0" variants={itemVariants}>
           <video autoPlay loop muted className="h-auto w-[80%]">
-            <source src="/atm-alpha2.mp4" type="video/mp4" />
+            <source src="/atm-alpha.mp4" type="video/mp4" />
           </video>
         </motion.div>
 

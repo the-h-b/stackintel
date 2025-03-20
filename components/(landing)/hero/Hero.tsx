@@ -88,7 +88,7 @@ const Hero = () => {
 
       {/* Right Column */}
       <video autoPlay loop muted className="w-full md:w-[50%]">
-        <source src="/atm-alpha.mp4" type="video/mp4" />
+        <source src="/atm-alpha2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <PopupForm
