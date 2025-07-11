@@ -60,7 +60,7 @@ const TermsAndConditions = () => {
       <section className="my-8">
         <h2 className="text-2xl font-semibold mb-4">DATA PROTECTION ADDENDUM</h2>
         <p className="text-gray-700 mb-4">
-          This Data Protection Addendum ("Addendum") between STACKINTEL Private Limited (“STACKINTEL Private Limited” or “Company”) and the Customer (as defined in the Agreement) forms part of the STACKINTEL Private Limited Terms & Conditions set forth at https://www.neokred.tech or such other written or electronic agreement incorporating this Addendum, in each case governing Customer's access to and use of the Services (the'Agreement'). Customer enters into this Addendum on behalf of itself and any Affiliates authorized to use the Services under the Agreement and who have not entered into a separate contractual arrangement with STACKINTEL Private Limited. For the purposes of this Addendum only, and except where otherwise indicated, references to 'Customer' shall include Customer and such Affiliates.
+          This Data Protection Addendum ("Addendum") between STACKINTEL Private Limited (“STACKINTEL Private Limited” or “Company”) and the Customer (as defined in the Agreement) forms part of the STACKINTEL Private Limited Terms & Conditions set forth at https://www.Stackintel.tech or such other written or electronic agreement incorporating this Addendum, in each case governing Customer's access to and use of the Services (the'Agreement'). Customer enters into this Addendum on behalf of itself and any Affiliates authorized to use the Services under the Agreement and who have not entered into a separate contractual arrangement with STACKINTEL Private Limited. For the purposes of this Addendum only, and except where otherwise indicated, references to 'Customer' shall include Customer and such Affiliates.
         </p>
         <p className="text-gray-700 mb-4">
           The Parties hereby agree that the terms and conditions set out below shall be added as an Addendum to the Agreement.
@@ -192,7 +192,7 @@ const TermsAndConditions = () => {
           </p>
           <p className="text-gray-700 mt-4">
             Name: Tarun Suresh Nazare<br/>
-            Email ID: tarun@neokred.tech
+            Email ID: tarun@Stackintel.tech
           </p>
           <p className="text-gray-700 mt-4">
             There are no Temporary files getting generated during processing.
@@ -219,7 +219,7 @@ const TermsAndConditions = () => {
               <h5 className="font-semibold">Data Importer</h5>
               <p>Name: STACKINTEL Private Limited</p>
               <p>Address: 1st Floor, Indiqube South Island, R K Colony, 2nd Phase, J. P. Nagar Bengaluru, Karnataka 560078</p>
-              <p>Role (controller/processor): Tarun Suresh Nazare, Director, Co-Founder & CEO tarun@neokred.tech</p>
+              <p>Role (controller/processor): Tarun Suresh Nazare, Director, Co-Founder & CEO tarun@Stackintel.tech</p>
               <p>Signature and date: Provision of the Services to the Customer in accordance with the Agreement.</p>
               <p>Activities relevant to the data transferred under these Clauses: Signature and date are set out in the Agreement.</p>
               <p>Contact person's name, position and contact details: Processor</p>
@@ -233,7 +233,7 @@ const TermsAndConditions = () => {
           <p><strong>Subject matter and duration of the Processing of the Personal Data</strong></p>
           <p>The subject matter of the processing of personal data is to onboard the customer into our Customer applications, completing the KYC of customers and creating behavioral analytics of customers. The duration of the processing will extend for as long as necessary to achieve the specified purpose. Typically, this will include the entire duration of the customer or employee relationship, and data may be retained for a specific period following the termination of the relationship as per legal requirements and company policies.</p>
           <p><strong>The nature and purpose of the Processing of the Personal Data</strong></p>
-          <p>Nature: Neokred process personal data primarily for financial technology-related services and other products associated with us. Focusing on verifying the identity of the customer to prevent fraudulent activities and specialize in collecting and maintaining information about individuals and businesses. Purpose: The purpose of processing personal data in fintech is to facilitate secure and efficient financial transactions, provide personalized financial services, and ensure compliance with regulatory requirements. Personal data is often used for identity verification, risk assessment, and improving user experiences.</p>
+          <p>Nature: Stackintel process personal data primarily for financial technology-related services and other products associated with us. Focusing on verifying the identity of the customer to prevent fraudulent activities and specialize in collecting and maintaining information about individuals and businesses. Purpose: The purpose of processing personal data in fintech is to facilitate secure and efficient financial transactions, provide personalized financial services, and ensure compliance with regulatory requirements. Personal data is often used for identity verification, risk assessment, and improving user experiences.</p>
           <p><strong>The categories of Data Subject to whom the Customer Personal Data relates</strong></p>
           <p>The types of data include:</p>
           <ul className="list-disc pl-5">
