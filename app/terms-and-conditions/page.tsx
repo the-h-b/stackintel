@@ -191,8 +191,8 @@ const TermsAndConditions = () => {
             In the event a Data Subject wishes to exercise its data subject rights under applicable Data Protection Law, including, but not limited to, a data subject's right of access, correction and/or erasure of its Personal Data in STACKINTEL Private Limited's control, the Data Subjects can submit such request done by contacting STACKINTEL Private Limited's Data Protection Officer (DPO) below. Also for raising concerns and/or any complaints related to the Customer Personal Data that can be done by contacting the Data Protection Officer below:
           </p>
           <p className="text-gray-700 mt-4">
-            Name: Tarun Suresh Nazare<br/>
-            Email ID: tarun@Stackintel.tech
+            Name: Salil chaturvedi<br/>
+            Email ID: Salil@stackintel.in
           </p>
           <p className="text-gray-700 mt-4">
             There are no Temporary files getting generated during processing.
@@ -218,8 +218,8 @@ const TermsAndConditions = () => {
             <div>
               <h5 className="font-semibold">Data Importer</h5>
               <p>Name: STACKINTEL Private Limited</p>
-              <p>Address: 1st Floor, Indiqube South Island, R K Colony, 2nd Phase, J. P. Nagar Bengaluru, Karnataka 560078</p>
-              <p>Role (controller/processor): Tarun Suresh Nazare, Director, Co-Founder & CEO tarun@Stackintel.tech</p>
+              <p>Address: #201, 2nd Floor, Arc Plaza Industrial Estate, Veera Desai Road, Andheri West, Mumbai-400053</p>
+              <p>Role (controller/processor): Salil chaturvedi Salil@stackintel.in Founder & CEO</p>
               <p>Signature and date: Provision of the Services to the Customer in accordance with the Agreement.</p>
               <p>Activities relevant to the data transferred under these Clauses: Signature and date are set out in the Agreement.</p>
               <p>Contact person's name, position and contact details: Processor</p>
