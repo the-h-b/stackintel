@@ -60,13 +60,13 @@ const Navbar = () => {
       href: "/products"
     },
     {
-      name: "Stack inflow",
+      name: "StackInflow",
       description: "Integrate frictionless payment solutions in your product.",
-      features: ["Payin", "Payout", "Virtual Account Number"],
+      features: ["Payin", "Payout"],
       href: "/products/collectbot"
     },
     {
-      name: "Stackcontrol ",
+      name: "StackControl ",
       description: "Build user trust with respectful data processing and retention practices.",
       features: ["DPDP Consent Manager", "Blutic B2C"],
       href: "/products/consent-management"
