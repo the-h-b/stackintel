@@ -57,7 +57,7 @@ const Navbar = () => {
       name: "CardStack",
       description: "Comprehensive identity verification and risk assessment solutions.",
       features: ["Prepaid Card Management System", "Card Issuer Switch", "Fraud Prevention", "Access Control", "Banking as a Service"],
-      href: "/products/profilex"
+      href: "/products"
     },
     {
       name: "Stack inflow",
