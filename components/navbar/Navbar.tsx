@@ -52,32 +52,32 @@ const Navbar = () => {
     };
   }, []);
 
-  const products = [
-    {
-      name: "CardStack",
-      description: "Comprehensive identity verification and risk assessment solutions.",
-      features: ["Prepaid Card Management System", "Card Issuer Switch", "Fraud Prevention", "Access Control", "Banking as a Service"],
-      href: "/products"
-    },
-    {
-      name: "StackInflow",
-      description: "Integrate frictionless payment solutions in your product.",
-      features: ["Payin", "Payout"],
-      href: "/products/collectbot"
-    },
-    {
-      name: "StackControl ",
-      description: "Build user trust with respectful data processing and retention practices.",
-      features: ["DPDP Consent Manager", "Blutic B2C"],
-      href: "/products/consent-management"
-    },
-    {
-      name: "StackRails  ",
-      description: "Streamline your payments with our powerful UPI infrastructure.",
-      features: ["UPI Infrastructure"],
-      href: "https://developer.stackintel.in/"
-    }
-  ];
+  // const products = [
+  //   {
+  //     name: "CardStack",
+  //     description: "Comprehensive identity verification and risk assessment solutions.",
+  //     features: ["Prepaid Card Management System", "Card Issuer Switch", "Fraud Prevention", "Access Control", "Banking as a Service"],
+  //     href: "/products"
+  //   },
+  //   {
+  //     name: "StackInflow",
+  //     description: "Integrate frictionless payment solutions in your product.",
+  //     features: ["Payin", "Payout"],
+  //     href: "/products/collectbot"
+  //   },
+  //   {
+  //     name: "StackControl ",
+  //     description: "Build user trust with respectful data processing and retention practices.",
+  //     features: ["DPDP Consent Manager", "Blutic B2C"],
+  //     href: "/products/consent-management"
+  //   },
+  //   {
+  //     name: "StackRails  ",
+  //     description: "Streamline your payments with our powerful UPI infrastructure.",
+  //     features: ["UPI Infrastructure"],
+  //     href: "https://developer.stackintel.in/"
+  //   }
+  // ];
 
   return (
     <>
