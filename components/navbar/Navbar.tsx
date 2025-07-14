@@ -54,28 +54,28 @@ const Navbar = () => {
 
   const products = [
     {
-      name: "ProfileX",
+      name: "CardStack",
       description: "Comprehensive identity verification and risk assessment solutions.",
       features: ["Onboarding", "Profiling", "Fraud Prevention", "Skip Tracing", "Nominee Tracing"],
       href: "/products/profilex"
     },
     {
-      name: "CollectBot",
+      name: "Stack inflow",
       description: "Integrate frictionless payment solutions in your product.",
       features: ["Payin", "Payout", "Virtual Account Number"],
       href: "/products/collectbot"
     },
     {
-      name: "Consent Management",
+      name: "Stackcontrol ",
       description: "Build user trust with respectful data processing and retention practices.",
       features: ["DPDP Consent Manager", "Blutic B2C"],
       href: "/products/consent-management"
     },
     {
-      name: "UPI Svitch",
+      name: "StackRails  ",
       description: "Streamline your payments with our powerful UPI infrastructure.",
       features: ["UPI Infrastructure"],
-      href: "/products/upi-svitch"
+      href: "https://developer.stackintel.in/"
     }
   ];
 
