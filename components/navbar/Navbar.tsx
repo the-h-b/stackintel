@@ -213,7 +213,12 @@ const Navbar = () => {
           >
             About Us
           </Link>
-          
+          <Link
+              href="/products"
+              className="text-[16px] text-gray-700 hover:text-gray-900 transition-all tracking-wide"
+            >
+              Products
+            </Link>
           {/* Mobile Products Dropdown
           <div className="w-full">
             <button
