@@ -102,7 +102,7 @@ const Navbar = () => {
               About Us
             </Link>
             
-            {/* Products Dropdown */}
+            {/* Products Dropdown
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={handleProductsDropdown}
@@ -152,7 +152,7 @@ const Navbar = () => {
                   </div>
                 </div>
               )}
-            </div>
+            </div>  */}
             
             <a
               href="https://developer.stackintel.in/"
