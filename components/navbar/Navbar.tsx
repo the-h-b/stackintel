@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import HeroImage from "../../assets/static/stacklogo.png";
 import Button from "../Button";
@@ -10,6 +11,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoChevronDown } from "react-icons/io5";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [productsDropdown, setProductsDropdown] = useState(false);
@@ -100,6 +102,13 @@ const Navbar = () => {
               className="text-[16px] text-gray-700 hover:text-gray-900 transition-all tracking-wide"
             >
               About Us
+            </Link>
+
+            <Link
+              href="/products"
+              className="text-[16px] text-gray-700 hover:text-gray-900 transition-all tracking-wide"
+            >
+              Products
             </Link>
             
             {/* Products Dropdown
