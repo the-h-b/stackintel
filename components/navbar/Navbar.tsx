@@ -56,7 +56,7 @@ const Navbar = () => {
     {
       name: "CardStack",
       description: "Comprehensive identity verification and risk assessment solutions.",
-      features: ["Onboarding", "Profiling", "Fraud Prevention", "Skip Tracing", "Nominee Tracing"],
+      features: ["Prepaid Card Management System", "Card Issuer Switch", "Fraud Prevention", "Access Control", "Banking as a Service"],
       href: "/products/profilex"
     },
     {
