@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [productsDropdown, setProductsDropdown] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  // const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -34,23 +34,23 @@ const Navbar = () => {
     );
   };
 
-  const handleProductsDropdown = () => {
-    setProductsDropdown(!productsDropdown);
-  };
+  // const handleProductsDropdown = () => {
+  //   setProductsDropdown(!productsDropdown);
+  // };
 
   // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setProductsDropdown(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event: MouseEvent) => {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+  //       setProductsDropdown(false);
+  //     }
+  //   };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
 
   // const products = [
   //   {
