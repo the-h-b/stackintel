@@ -205,7 +205,7 @@ const Navbar = () => {
             About Us
           </Link>
           
-          {/* Mobile Products Dropdown */}
+          {/* Mobile Products Dropdown
           <div className="w-full">
             <button
               onClick={handleProductsDropdown}
@@ -249,7 +249,7 @@ const Navbar = () => {
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
           
           <a
             href="https://developer.stackintel.in/"
