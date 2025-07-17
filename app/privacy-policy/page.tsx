@@ -5,168 +5,146 @@ const page = () => {
     <div className="max-w-7xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
       <p className="text-gray-700 mb-4">
-        This privacy policy sets out how STACKINTEL PRIVATE LIMITED
-        uses and protects any information that you give STACKINTEL
-        PRIVATE LIMITED when you use this website.
-      </p>
-      <p className="text-gray-700 mb-4">
-        STACKINTEL PRIVATE LIMITED is committed to ensuring that your
-        privacy is protected. Should we ask you to provide certain information
-        by which you can be identified when using this website, and then you
-        can be assured that it will only be used in accordance with this
-        privacy statement.
-      </p>
-      <p className="text-gray-700 mb-4">
-        STACKINTEL PRIVATE LIMITED may change this policy from time to
-        time by updating this page. You should check this page from time to
-        time to ensure that you are happy with any changes.
+        This policy explains how STACKINTEL PRIVATE LIMITED handles your
+        information when you use this website. We are committed to protecting
+        your privacy, and any information you provide that identifies you will
+        be used only as described here. Please note that STACKINTEL PRIVATE
+        LIMITED may update this policy periodically, so we encourage you to
+        review this page to ensure you're comfortable with any changes.
       </p>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold mb-4">
-          We may collect the following information:
-        </h2>
+        <h2 className="text-2xl font-semibold mb-4">Information We May Collect</h2>
         <ul className="list-disc pl-5 text-gray-700">
-          <li>Name and job title</li>
-          <li>Contact information including email address</li>
+          <li>Your **name and job title**</li>
+          <li>**Contact details**, including your email address</li>
           <li>
-            Demographic information such as postcode, preferences and interests
+            **Demographic data** such as your postcode, preferences, and
+            interests
           </li>
-          <li>Other information relevant to customer surveys and/or offers</li>
+          <li>Other information relevant to **customer surveys or promotional offers**</li>
         </ul>
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold mb-4">
-          What we do with the information we gather
-        </h2>
+        <h2 className="text-2xl font-semibold mb-4">How We Use Your Information</h2>
         <p className="text-gray-700 mb-4">
-          We require this information to understand your needs and provide you
-          with a better service, and in particular for the following reasons:
+          We collect this information to understand your needs and provide you
+          with better service. Specifically, we use it for:
         </p>
         <ul className="list-disc pl-5 text-gray-700">
-          <li>Internal record keeping.</li>
-          <li>We may use the information to improve our products and services.</li>
+          <li>**Internal record keeping**.</li>
+          <li>**Improving our products and services**.</li>
           <li>
-            We may periodically send promotional emails about new products,
-            special offers or other information which we think you may find
-            interesting using the email address which you have provided.
+            **Sending promotional emails** about new products, special offers,
+            or other information we think you might find interesting, using the
+            email address you've provided.
           </li>
           <li>
-            From time to time, we may also use your information to contact you
-            for market research purposes. We may contact you by email, phone,
-            fax or mail. We may use the information to customise the website
-            according to your interests.
+            **Contacting you for market research** purposes via email, phone,
+            fax, or mail.
           </li>
+          <li>**Customizing the website** to align with your interests.</li>
         </ul>
         <p className="text-gray-700 mt-4">
-          We are committed to ensuring that your information is secure. In order
-          to prevent unauthorised access or disclosure we have put in suitable
-          measures.
+          We are dedicated to keeping your information secure and have
+          implemented appropriate measures to prevent unauthorized access or
+          disclosure.
         </p>
       </section>
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold mb-4">
-          YOUR RIGHTS & PREFERENCES AS A DATA SUBJECT
+          Your Rights & Preferences as a Data Subject
         </h2>
         <p className="text-gray-700 mb-4">
-          Subject to the ISO and applicable law’s limitations, the rights
-          afforded to you as a data subject are:
+          Subject to ISO standards and applicable laws, you have the following
+          rights regarding your personal data:
         </p>
         <ul className="list-disc pl-5 text-gray-700 space-y-2">
           <li>
-            <strong>RIGHT TO BE INFORMED:</strong> You have a right to be
-            informed about the manner in which any of your personal data is
-            collected or used which we have endeavored to do by way of this
-            Policy.
+            <strong>Right to Be Informed:</strong> You have the right to know
+            how your personal data is collected and used, which this policy aims
+            to provide.
           </li>
           <li>
-            <strong>RIGHT OF ACCESS:</strong> You have a right to access the
-            personal data you have provided by requesting us to provide you with
-            the same.
+            <strong>Right of Access:</strong> You can request access to the
+            personal data you have provided to us.
           </li>
           <li>
-            <strong>RIGHT TO RECTIFICATION:</strong> You have a right to
-            request us to amend or update your personal data if it is inaccurate
-            or incomplete.
+            <strong>Right to Rectification:</strong> You have the right to ask
+            us to correct or complete any inaccurate or incomplete personal data
+            we hold about you.
           </li>
           <li>
-            <strong>RIGHT TO ERASURE:</strong> You have a right to request us
-            to delete your personal data.
+            <strong>Right to Erasure:</strong> You can request that we delete
+            your personal data.
           </li>
           <li>
-            <strong>RIGHT TO RESTRICT:</strong> You have a right to request
-            us to temporarily or permanently stop processing all or some of your
-            personal data.
+            <strong>Right to Restrict Processing:</strong> You have the right
+            to ask us to temporarily or permanently limit the processing of some
+            or all of your personal data.
           </li>
           <li>
-            <strong>RIGHT TO OBJECT:</strong> You have a right, at any time,
-            to object to our processing of your personal data under certain
-            circumstances. You have an absolute right to object to us processing
-            your personal data for the purposes of direct marketing.
+            <strong>Right to Object:</strong> You can object to our processing
+            of your personal data under certain circumstances at any time. You
+            have an absolute right to object if we process your personal data
+            for direct marketing.
           </li>
           <li>
-            <strong>RIGHT TO DATA PORTABILITY:</strong> You have a right to
-            request us to provide you with a copy of your personal data in
-            electronic format and you can transmit that personal data for using
-            another third-party’s product/service.
+            <strong>Right to Data Portability:</strong> You can request a copy
+            of your personal data in an electronic format so you can transfer it
+            to another third-party product or service.
           </li>
           <li>
-            <strong>RIGHT NOT TO BE SUBJECT TO AUTOMATED DECISION-MAKING:</strong>
-            You have a right to not be subject to a decision based solely on
-            automated decision making, including profiling.
+            <strong>Right Not to Be Subject to Automated Decision-Making:</strong>{" "}
+            You have the right to not be subject to decisions based solely on
+            automated processing, including profiling.
           </li>
         </ul>
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold mb-4">How we use cookies</h2>
+        <h2 className="text-2xl font-semibold mb-4">How We Use Cookies</h2>
         <p className="text-gray-700 mb-4">
-          Opt-in to cookies is a type of cookie compliance that requires the
-          user to specifically accept the use of cookies on the site before we
-          issue cookies.
+          We employ an "opt-in" approach to cookies, meaning we only issue
+          cookies after you explicitly accept their use on our site. No cookies
+          are set until you click "Accept" (or a similar confirmation). This
+          represents the highest level of compliance.
         </p>
         <p className="text-gray-700 mb-4">
-          There are no cookies given to the user until they click "Accept" (or a
-          similar confirmation button). This is the highest level of
-          compliance.
+          If you choose to **"Accept" cookies**, all scripts that utilize
+          cookies will run, and you will continue to browse the site with
+          cookies enabled. Please note that cookie-dependent scripts are not
+          loaded until you specifically accept the cookie message.
         </p>
         <p className="text-gray-700 mb-4">
-          If the user chooses to "Accept" cookies, we run all of the scripts
-          that use cookies. The user continues to use the site with cookies.
-          Understand that scripts that use cookies are not loaded on the page
-          until the user specifically accepts the cookie message.
-        </p>
-        <p className="text-gray-700 mb-4">
-          If the user chooses to "Deny" cookies, we allow them to continue
-          browsing the site and disable all use of scripts that issue
-          non-essential cookies. They are never given cookies and will continue
-          to not get cookies throughout their time on your website.
+          If you choose to **"Deny" cookies**, we will allow you to continue
+          Browse the site, and we will disable all non-essential
+          cookie-issuing scripts. You will not receive cookies and will continue
+          to browse our website without them.
         </p>
       </section>
 
       <p className="text-gray-700 mb-4">
-        We will not sell, distribute or lease your personal information to third
-        parties unless we have your permission or are required by law to do so.
-        We may use your personal information to send you promotional information
-        about third parties which we think you may find interesting if you tell
-        us that you wish this to happen. If you believe that any information we
-        are holding on you is incorrect or incomplete, please write to or email
-        us as soon as possible, at the above address. We will promptly correct
-        any information found to be incorrect.
+        We will **not sell, distribute, or lease your personal information to
+        third parties** unless we have your explicit permission or are legally
+        required to do so. We may, however, use your personal information to send
+        you promotional information about third parties if you indicate you wish
+        this to happen. If you believe any information we hold about you is
+        incorrect or incomplete, please contact us by writing or emailing us at
+        the address provided below, and we will promptly correct it.
       </p>
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold mb-4">
-          COMPLAINTS AND GRIEVANCE REDRESSAL
+          Complaints and Grievance Redressal
         </h2>
         <p className="text-gray-700 mb-4">
-          Any complaints or concerns in relation to your Personal Information or
-          content of this Website or any dispute or breach of confidentiality
-          or any proprietary rights of User during the use of the Website or
-          any intellectual property of any User should be immediately informed
-          to the Risk & Compliance Team by sending an email to{" "}
+          For any complaints or concerns related to your Personal Information,
+          the content of this Website, or any dispute, breach of confidentiality,
+          or proprietary rights during your use of the Website, please
+          immediately inform our **Risk & Compliance Team** by emailing{" "}
           <a
             href="mailto:support@stackintel.in"
             className="text-blue-600 hover:underline"
@@ -191,12 +169,10 @@ const page = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold mb-4">
-          Grievance Redressal Policy
-        </h2>
+        <h2 className="text-2xl font-semibold mb-4">Grievance Redressal Policy</h2>
         <p className="text-gray-700">
-          In case of any other complaints regarding the company's products or
-          services, kindly send an email to{" "}
+          For any other complaints regarding the company's products or services,
+          please send an email to{" "}
           <a
             href="mailto:support@stackintel.in"
             className="text-blue-600 hover:underline"

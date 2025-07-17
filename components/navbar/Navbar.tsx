@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [productsDropdown, setProductsDropdown] = useState(false);
-  // const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -36,50 +36,50 @@ const Navbar = () => {
     );
   };
 
-  // const handleProductsDropdown = () => {
-  //   setProductsDropdown(!productsDropdown);
-  // };
+  const handleProductsDropdown = () => {
+    setProductsDropdown(!productsDropdown);
+  };
 
   // Close dropdown when clicking outside
-  // useEffect(() => {
-  //   const handleClickOutside = (event: MouseEvent) => {
-  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-  //       setProductsDropdown(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setProductsDropdown(false);
+      }
+    };
 
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, []);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
-  // const products = [
-  //   {
-  //     name: "CardStack",
-  //     description: "Comprehensive identity verification and risk assessment solutions.",
-  //     features: ["Prepaid Card Management System", "Card Issuer Switch", "Fraud Prevention", "Access Control", "Banking as a Service"],
-  //     href: "/products"
-  //   },
-  //   {
-  //     name: "StackInflow",
-  //     description: "Integrate frictionless payment solutions in your product.",
-  //     features: ["Payin", "Payout"],
-  //     href: "/products/collectbot"
-  //   },
-  //   {
-  //     name: "StackControl ",
-  //     description: "Build user trust with respectful data processing and retention practices.",
-  //     features: ["DPDP Consent Manager", "Blutic B2C"],
-  //     href: "/products/consent-management"
-  //   },
-  //   {
-  //     name: "StackRails  ",
-  //     description: "Streamline your payments with our powerful UPI infrastructure.",
-  //     features: ["UPI Infrastructure"],
-  //     href: "https://developer.stackintel.in/"
-  //   }
-  // ];
+  const products = [
+    {
+      name: "CardStack",
+      description: "Comprehensive identity verification and risk assessment solutions.",
+      features: ["Prepaid Card Management System", "Card Issuer Switch", "Fraud Prevention", "Access Control", "Banking as a Service"],
+      href: "/products"
+    },
+    {
+      name: "StackInflow",
+      description: "Integrate frictionless payment solutions in your product.",
+      features: ["Payin", "Payout"],
+      href: "/products/collectbot"
+    },
+    {
+      name: "StackControl ",
+      description: "Build user trust with respectful data processing and retention practices.",
+      features: ["DPDP Consent Manager", "Blutic B2C"],
+      href: "/products/consent-management"
+    },
+    {
+      name: "StackRails  ",
+      description: "Streamline your payments with our powerful UPI infrastructure.",
+      features: ["UPI Infrastructure"],
+      href: "https://developer.stackintel.in/"
+    }
+  ];
 
   return (
     <>
@@ -111,7 +111,7 @@ const Navbar = () => {
               Products
             </Link>
             
-            {/* Products Dropdown
+            Products Dropdown
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={handleProductsDropdown}
@@ -161,7 +161,7 @@ const Navbar = () => {
                   </div>
                 </div>
               )}
-            </div>  */}
+            </div> 
             
             <a
               href="https://developer.stackintel.in/"
@@ -219,7 +219,7 @@ const Navbar = () => {
             >
               Products
             </Link>
-          {/* Mobile Products Dropdown
+          Mobile Products Dropdown
           <div className="w-full">
             <button
               onClick={handleProductsDropdown}
@@ -263,7 +263,7 @@ const Navbar = () => {
                 </div>
               </div>
             )}
-          </div> */}
+          </div>
           
           <a
             href="https://developer.stackintel.in/"
