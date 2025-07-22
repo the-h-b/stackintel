@@ -1,108 +1,108 @@
+"use client";
+import React from "react";
 import Image from "next/image";
-import ProductDot from "../../assets/product/p-dot.png";
-import ProductImg1 from "../../assets/product/pi-1.png";
-import ProductImg2 from "../../assets/product/pi-2.png";
-import ProductImg3 from "../../assets/product/pi-3.png";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
-const ProductInformation = [
-  {
-    id: 1,
-    title: "Seamless Integration",
-    description:
-      "Effortlessly integrate our solutions into your existing systems with minimal disruption and maximum efficiency.",
-    features: [
-      "API-driven adaptability for custom needs",
-      "Multi-platform support for web and mobile",
-      "Real-time data synchronization",
-      "Scalable infrastructure for growing businesses",
-    ],
-    image: ProductImg1,
-  },
-  {
-    id: 2,
-    title: "Advanced Security",
-    description:
-      "Ensure your data and transactions are secure with our enterprise-grade security features.",
-    features: [
-      "End-to-end encryption for sensitive data",
-      "Advanced fraud detection algorithms",
-      "Compliance with global standards like PCI DSS",
-      "24/7 monitoring for proactive threat management",
-    ],
-    image: ProductImg2,
-  },
-  {
-    id: 3,
-    title: "Streamlined Operations",
-    description:
-      "Optimize your workflows with innovative tools designed to reduce complexity and increase efficiency.",
-    features: [
-      "Customizable dashboards for actionable insights",
-      "Automated processes to save time",
-      "Real-time reporting for better decision-making",
-      "Flexible deployment options",
-    ],
-    image: ProductImg3,
-  },
-];
+interface ProductItem {
+  title: string;
+  description: string;
+  href: string;
+  icon: string;
+}
 
-const Component = () => {
+interface ProductItemsProps {
+  title: string;
+  items: ProductItem[];
+}
+
+const ProductItems: React.FC<ProductItemsProps> = ({ title, items }) => {
   return (
-    <>
-      {/* Title Section */}
-      <div className="text-center py-16 px-8">
-        <h6 className="text-[#2634BB] font-semibold text-sm md:text-base">
-          Robust Solutions
-        </h6>
-        <h1 className="text-3xl md:text-5xl font-light my-5">
-          Comprehensive Solutions, Tailored for You
-        </h1>
-      </div>
-
-      {/* Content Sections */}
-      {ProductInformation.map((product, index) => (
-        <div
-          key={index}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-16 md:py-24 md:px-32"
+    <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Title Section */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          {/* Image */}
-          <div className="flex justify-center items-center">
-            <Image
-              src={product.image}
-              alt={`${product.title} illustration`}
-              className="h-auto w-full max-w-md md:max-w-lg"
-            />
-          </div>
+          <motion.h6 
+            className="text-[#2634BB] font-semibold text-sm md:text-base mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Our Services
+          </motion.h6>
+          <motion.h1 
+            className="text-3xl md:text-5xl font-light"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            {title}
+          </motion.h1>
+        </motion.div>
 
-          {/* Text Content */}
-          <div>
-            <span className="text-[#2634BB] bg-[#E6E4FC] px-3 py-2 rounded uppercase font-semibold text-xs md:text-sm">
-              {product.title}
-            </span>
-            <h1 className="my-6 text-2xl md:text-4xl lg:text-5xl font-light">
-              {product.description}
-            </h1>
-            {/* Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              {product.features.map((feature, i) => (
-                <div key={i} className="flex flex-col items-start space-y-2">
-                  <Image
-                    src={ProductDot}
-                    alt="Dot icon"
-                    className="h-auto w-8"
-                  />
-                  <h2 className="font-bold text-base md:text-lg">{feature}</h2>
-                  <p className="text-gray-500 text-sm md:text-base">
-                    {feature}
+        {/* Items Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {items.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="group"
+            >
+              <Link href={item.href}>
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border border-gray-100 group-hover:border-blue-200">
+                  <motion.div
+                    className="flex items-center gap-4 mb-6"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center group-hover:from-blue-200 group-hover:to-indigo-200 transition-all duration-300">
+                      <span className="text-2xl">{item.icon}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                  </motion.div>
+                  
+                  <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
+                    {item.description}
                   </p>
+                  
+                  <motion.div
+                    className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all duration-300"
+                    whileHover={{ x: 5 }}
+                  >
+                    <span>Learn More</span>
+                    <motion.svg 
+                      className="w-4 h-4" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </motion.svg>
+                  </motion.div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
-      ))}
-    </>
+      </div>
+    </div>
   );
 };
 
-export default Component;
+export default ProductItems;

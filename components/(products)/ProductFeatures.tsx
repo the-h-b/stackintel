@@ -1,199 +1,158 @@
-"use client"; // If you're using app router in Next.js and want client-side code
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
-// Replace these imports with your actual images
-import ProductImg1 from "../../assets/product/p-1.png";
-import ProductImg2 from "../../assets/product/p-2.png";
-import ProductImg3 from "../../assets/product/p-3.png";
-import ProductImg4 from "../../assets/product/p-4.png";
-import ProductImg5 from "../../assets/product/p-5.png";
-import ProductImg6 from "../../assets/product/p-6.png";
+interface Feature {
+  title: string;
+  description: string;
+  icon: string;
+}
 
-export default function StackedStickySections() {
+interface ProductFeaturesProps {
+  title: string;
+  features: Feature[];
+}
+
+const ProductFeatures: React.FC<ProductFeaturesProps> = ({ title, features }) => {
+  const colors = [
+    "from-blue-500 to-indigo-600",
+    "from-purple-500 to-pink-600", 
+    "from-green-500 to-teal-600",
+    "from-orange-500 to-red-600",
+    "from-cyan-500 to-blue-600",
+    "from-violet-500 to-purple-600"
+  ];
+
   return (
-    <div className="relative w-full h-[600vh]">
-      {/* 
-        1) FIRST SECTION - STICKY
-           - This section stays pinned at the top until the scroll 
-             moves on to reveal the second.
-       */}
-      <motion.section
-        className="sticky top-0 h-screen bg-[#3F87F2] flex flex-col md:grid md:grid-cols-2 py-16 md:py-32 rounded-lg"
-        style={{ zIndex: 30 }}
-      >
-        {/* Left Content */}
-        <div className="p-8 md:p-32">
-          <h1 className="font-light text-3xl md:text-5xl leading-snug md:leading-tight text-white">
-            Prepaid Card Management System
-          </h1>
-          <hr className="w-[150px] md:w-[300px] my-4 md:my-8" />
-          <p className="text-base md:text-lg mb-4 font-normal text-white">
-            Enable seamless issuance, management, and transaction processing for
-            prepaid cards. Our platform supports multiple use cases, including
-            gift cards, payroll cards, and digital wallets, ensuring
-            flexibility, compliance, and real-time control.
-          </p>
+    <div className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Title Section */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            {title}
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            Powerful features designed to transform your business operations
+          </motion.p>
+        </motion.div>
+
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="group"
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border border-gray-100 group-hover:border-blue-200 relative overflow-hidden">
+                {/* Background Gradient Animation */}
+                <motion.div
+                  className={`absolute inset-0 bg-gradient-to-br ${colors[index % colors.length]} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
+                  initial={{ scale: 0, rotate: 180 }}
+                  whileHover={{ scale: 1, rotate: 0 }}
+                  transition={{ duration: 0.5 }}
+                />
+                
+                <motion.div
+                  className="relative z-10"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <motion.div
+                    className={`w-16 h-16 bg-gradient-to-br ${colors[index % colors.length]} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <span className="text-2xl text-white">{feature.icon}</span>
+                  </motion.div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                    {feature.description}
+                  </p>
+                </motion.div>
+
+                {/* Hover Effect Lines */}
+                <motion.div
+                  className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 w-0 group-hover:w-full transition-all duration-500"
+                  initial={{ width: 0 }}
+                  whileHover={{ width: "100%" }}
+                />
+              </div>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Right Content (Image) */}
-        <div className="grid place-items-center h-auto p-8">
-          <Image
-            src={ProductImg1}
-            alt="Product 1"
-            className="h-auto w-full max-w-[300px] md:max-w-[60%]"
-          />
-        </div>
-      </motion.section>
-
-      {/* 
-        2) SECOND SECTION - STICKY
-           - Also pinned at the top. As the user scrolls past the first 
-             section’s threshold, this one becomes the “active” sticky.
-       */}
-      <motion.section
-        className="sticky top-0 h-screen bg-[#E06699] flex flex-col md:grid md:grid-cols-2 py-16 md:py-32 rounded-lg"
-        style={{ zIndex: 50 }}
-      >
-        <div className="p-8 md:p-32">
-          <h1 className="font-light text-3xl md:text-5xl leading-snug md:leading-tight text-white">
-            Card Issuer Switch
-          </h1>
-          <hr className="w-[150px] md:w-[300px] my-4 md:my-8" />
-          <p className="text-base md:text-lg mb-4 font-normal text-white">
-            A powerful, scalable, and secure switching platform that enables
-            seamless authorization, routing, and transaction processing between
-            banks, networks, and fintechs. Ensure high availability, low
-            latency, and superior performance for all card transactions.
-          </p>
-        </div>
-        <div className="grid place-items-center h-auto p-8">
-          <Image
-            src={ProductImg6}
-            alt="Product 2"
-            className="h-auto w-full max-w-[300px] md:max-w-[60%]"
-          />
-        </div>
-      </motion.section>
-
-      {/* 
-        2) SECOND SECTION - STICKY
-           - Also pinned at the top. As the user scrolls past the first 
-             section’s threshold, this one becomes the “active” sticky.
-       */}
-      <motion.section
-        className="sticky top-0 h-screen bg-[#3F87F2] flex flex-col md:grid md:grid-cols-2 py-16 md:py-32 rounded-lg"
-        style={{ zIndex: 50 }}
-      >
-        <div className="p-8 md:p-32">
-          <h1 className="font-light text-3xl md:text-5xl leading-snug md:leading-tight text-white">
-            Access Control
-          </h1>
-          <hr className="w-[150px] md:w-[300px] my-4 md:my-8" />
-          <p className="text-base md:text-lg mb-4 font-normal text-white">
-            Enhance security with robust access control solutions for banking
-            and financial applications. Implement multi-factor authentication,
-            biometric verification, and tokenized transactions to safeguard
-            sensitive data and ensure compliance.
-          </p>
-        </div>
-        <div className="grid place-items-center h-auto p-8">
-          <Image
-            src={ProductImg5}
-            alt="Product 2"
-            className="h-auto w-full max-w-[300px] md:max-w-[60%]"
-          />
-        </div>
-      </motion.section>
-
-      {/* 
-        2) SECOND SECTION - STICKY
-           - Also pinned at the top. As the user scrolls past the first 
-             section’s threshold, this one becomes the “active” sticky.
-       */}
-      <motion.section
-        className="sticky top-0 h-screen bg-[#E06699] flex flex-col md:grid md:grid-cols-2 py-16 md:py-32 rounded-lg"
-        style={{ zIndex: 50 }}
-      >
-        <div className="p-8 md:p-32">
-          <h1 className="font-light text-3xl md:text-5xl leading-snug md:leading-tight text-white">
-            Fraud & Risk Management
-          </h1>
-          <hr className="w-[150px] md:w-[300px] my-4 md:my-8" />
-          <p className="text-base md:text-lg mb-4 font-normal text-white">
-            Mitigate fraud risks with AI-powered transaction monitoring and
-            real-time anomaly detection. Our system continuously analyzes
-            patterns to detect suspicious activities, prevent fraud, and protect
-            customer trust.
-          </p>
-        </div>
-        <div className="grid place-items-center h-auto p-8">
-          <Image
-            src={ProductImg2}
-            alt="Product 2"
-            className="h-auto w-full max-w-[300px] md:max-w-[60%]"
-          />
-        </div>
-      </motion.section>
-      {/* 
-        2) SECOND SECTION - STICKY
-           - Also pinned at the top. As the user scrolls past the first 
-             section’s threshold, this one becomes the “active” sticky.
-       */}
-      <motion.section
-        className="sticky top-0 h-screen bg-[#3F87F2] flex flex-col md:grid md:grid-cols-2 py-16 md:py-32 rounded-lg"
-        style={{ zIndex: 50 }}
-      >
-        <div className="p-8 md:p-32">
-          <h1 className="font-light text-3xl md:text-5xl leading-snug md:leading-tight text-white">
-            Banking as a Service (BaaS)
-          </h1>
-          <hr className="w-[150px] md:w-[300px] my-4 md:my-8" />
-          <p className="text-base md:text-lg mb-4 font-normal text-white">
-            Launch banking products with ease using our comprehensive BaaS
-            platform. From account management to payment processing, we provide
-            seamless API-driven banking solutions for fintechs, corporates, and
-            enterprises.
-          </p>
-        </div>
-        <div className="grid place-items-center h-auto p-8">
-          <Image
-            src={ProductImg3}
-            alt="Product 2"
-            className="h-auto w-full max-w-[300px] md:max-w-[60%]"
-          />
-        </div>
-      </motion.section>
-
-      {/* 
-        3) THIRD SECTION - NORMAL SCROLL
-           - This is not sticky. Once the user has scrolled past the 
-             second sticky section, they just continue normally with this one.
-       */}
-      <motion.section
-        className="sticky top-0 h-screen bg-[#616AD3] grid grid-cols-1 md:grid-cols-2 py-16 md:py-32 rounded-lg"
-        style={{ zIndex: 50 }}
-      >
-        <div className="p-8 md:p-32">
-          <h1 className="font-light text-3xl md:text-5xl leading-snug md:leading-tight text-white">
-            Corporate Expense Management System
-          </h1>
-          <hr className="w-[150px] md:w-[300px] my-4 md:my-8" />
-          <p className="text-base md:text-lg mb-4 font-normal text-white">
-            Simplify corporate spending with a smart, automated expense
-            management platform. Gain real-time insights, set spending limits,
-            and streamline approvals for better financial control and efficiency
-          </p>
-        </div>
-        <div className="grid place-items-center h-auto p-8">
-          <Image
-            src={ProductImg4}
-            alt="Product 3"
-            className="h-auto w-full max-w-[300px] md:max-w-[60%]"
-          />
-        </div>
-      </motion.section>
+        {/* Bottom CTA */}
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <motion.p 
+            className="text-gray-600 mb-6"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            viewport={{ once: true }}
+          >
+            Ready to experience these powerful features?
+          </motion.p>
+          <motion.a
+            href="/contacts"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <span>Get Started</span>
+            <motion.svg 
+              className="w-5 h-5" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+              animate={{ x: [0, 5, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </motion.svg>
+          </motion.a>
+        </motion.div>
+      </div>
     </div>
   );
-}
+};
+
+export default ProductFeatures;

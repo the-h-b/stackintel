@@ -1,7 +1,19 @@
 import React from "react";
+import Navbar from "../navbar/Navbar";
 
-const Layout = () => {
-  return <div>Layout</div>;
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* <Navbar /> */}
+      <main>
+        {children}
+      </main>
+    </div>
+  );
 };
 
 export default Layout;
