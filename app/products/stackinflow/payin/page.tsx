@@ -52,30 +52,27 @@ const PayinPage = () => {
         icon: "💳"
       },
       {
-        category: "Digital Wallets",
-        methods: ["Paytm", "PhonePe", "Google Pay", "Amazon Pay", "MobiKwik"],
-        icon: "📱"
+        category: "Net Banking",
+        methods: ["50+ Banks", "Corporate Banking", "IMPS", "NEFT"],
+        icon: "🏦"
       },
+      // {
+      //   category: "Digital Wallets",
+      //   methods: ["Paytm", "PhonePe", "Google Pay", "Amazon Pay", "MobiKwik"],
+      //   icon: "📱"
+      // },
       {
         category: "UPI",
         methods: ["All UPI Apps", "QR Codes", "UPI Intent", "UPI Collect"],
         icon: "🔄"
       },
-      {
-        category: "Net Banking",
-        methods: ["50+ Banks", "Corporate Banking", "IMPS", "NEFT"],
-        icon: "🏦"
-      },
-      {
-        category: "Buy Now Pay Later",
-        methods: ["Simpl", "LazyPay", "ePayLater", "ZestMoney"],
-        icon: "📅"
-      },
-      {
-        category: "International",
-        methods: ["PayPal", "Stripe", "Apple Pay", "Google Pay"],
-        icon: "🌍"
-      }
+      
+      // {
+      //   category: "Buy Now Pay Later",
+      //   methods: ["Simpl", "LazyPay", "ePayLater", "ZestMoney"],
+      //   icon: "📅"
+      // },
+      
     ],
     benefits: [
       "Increase conversion rates by up to 25% with optimized checkout experience",
