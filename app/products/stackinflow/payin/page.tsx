@@ -9,39 +9,39 @@ import ProductFooter from '../../../../components/(products)/ProductFooter';
 
 const PayinPage = () => {
   const productData = {
-    title: "Payin Solutions",
+    title: "StackIntel PayIn Solutions",
     subtitle: "Accept Payments Seamlessly",
-    description: "Comprehensive payment acceptance solutions that enable businesses to collect payments from customers through multiple channels with maximum security, efficiency, and optimized success rates.",
+    description: "A unified payment-acceptance engine that lets businesses collect funds across cards, UPI, wallets, BNPL, net-banking and international rails—backed by enterprise-grade security, intelligent routing, and lightning-fast settlements.",
     icon: "📥",
     features: [
       {
         title: "100+ Payment Methods",
-        description: "Accept payments via cards, UPI, wallets, net banking, EMI, BNPL, and international methods",
+        description: "Cards (Visa, MC, RuPay), UPI, wallets, net-banking, EMI, BNPL and global options.",
         icon: "💳"
       },
       {
-        title: "Smart Payment Routing",
-        description: "AI-powered intelligent routing to maximize success rates and minimize transaction costs",
+        title: "Intelligent Routing",
+        description: "Data-driven path selection maximizes success and minimizes cost per transaction.",
         icon: "🎯"
       },
       {
-        title: "Instant Settlements",
-        description: "Get your money faster with instant, same-day, and T+1 settlement options",
+        title: "Instant & Same-Day Settlements",
+        description: "Flexibility to receive funds on your timetable—no more waiting weeks to reconcile.",
         icon: "⚡"
       },
       {
-        title: "Advanced Fraud Protection",
-        description: "Machine learning-powered fraud detection with real-time risk scoring and prevention",
+        title: "Enterprise-Grade Fraud Protection",
+        description: "Real-time risk scoring and ML-powered anomaly detection keep chargebacks at bay.",
         icon: "🛡️"
       },
       {
-        title: "Seamless Integration",
-        description: "Developer-friendly APIs, SDKs, and plugins for quick integration with any platform",
+        title: "Developer-Friendly Integration",
+        description: "REST APIs, SDKs, plugins and webhooks for rapid integration with any stack.",
         icon: "🔧"
       },
       {
         title: "Real-time Analytics",
-        description: "Comprehensive dashboard with transaction monitoring, success rate optimization, and revenue insights",
+        description: "Live dashboards, success-rate heatmaps, revenue reports and custom KPIs.",
         icon: "📊"
       }
     ],
@@ -75,10 +75,10 @@ const PayinPage = () => {
       
     ],
     benefits: [
-      "Increase conversion rates by up to 25% with optimized checkout experience",
-      "Reduce payment failures by 40% with smart retry mechanisms and routing",
+      "Boost Conversions by up to 25% Streamlined checkout flows and adaptive UIs keep more customers through the finish line.",
+      "Cut Failure Rates by 40% Smart retry logic and dynamic route-switching ensure your transactions succeed the first time.",
       "Lower transaction costs with competitive pricing and volume discounts",
-      "Improve cash flow with instant and same-day settlement options",
+      "Accelerate cash flow with instant, same-day, or T+1 settlements so funds hit your account when you need them.",
       "Enhanced security with PCI DSS Level 1 compliance and tokenization",
       "24/7 customer support with dedicated account management",
       "Real-time reconciliation and automated financial reporting",
@@ -222,9 +222,9 @@ const PayinPage = () => {
             <div className="grid md:grid-cols-4 gap-8">
               {[
                 { metric: "98.5%", label: "Average Success Rate", desc: "Industry-leading payment success" },
-                { metric: "2.3s", label: "Average Processing Time", desc: "Lightning-fast transactions" },
-                { metric: "25%", label: "Conversion Increase", desc: "Improved checkout experience" },
-                { metric: "40%", label: "Failure Reduction", desc: "Smart routing optimization" }
+                { metric: "2.3s", label: "Average Processing Time", desc: "Lightning-fast customer experience" },
+                { metric: "25%", label: "Conversion Increase", desc: "25% Conversion Lift	Smoother checkout drives more sales" },
+                { metric: "40%", label: "Failure Reduction", desc: "40% Failure Reduction	Smarter routing keeps payments flowing" }
               ].map((stat, index) => (
                 <motion.div 
                   key={index} 
@@ -259,8 +259,8 @@ const PayinPage = () => {
           viewport={{ once: true }}
         >
           <ProductFooter 
-            title="Start Accepting Payments Today"
-            description="Join thousands of merchants who trust our payin solutions for their payment acceptance needs. Get started in minutes with our easy integration."
+            title="Ready to turn every checkout into a win?"
+            description="Contact StackIntel today to see a live demo and start accepting payments with confidence."
           />
         </motion.div>
       </motion.div>

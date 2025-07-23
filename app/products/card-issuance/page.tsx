@@ -8,29 +8,29 @@ import ProductFooter from '../../../components/(products)/ProductFooter';
 
 const CardIssuancePage = () => {
   const productData = {
-    title: "Card Issuance",
+    title: "Card Issuance with StackIntel",
     subtitle: "Advanced Digital Card Solutions",
-    description: "Transform your card issuance operations with our cutting-edge digital platform. Issue virtual and physical cards instantly, manage card lifecycles, and provide seamless customer experiences with enterprise-grade security and real-time monitoring capabilities.",
+    description: "Launch and manage your own card programs—virtual, physical, or hybrid—in minutes, not months. Our API-first platform gives you full lifecycle control, enterprise-grade security, and real-time insights, so you can focus on growing your business, not your infrastructure.",
     icon: "💳",
     features: [
       {
         title: "Instant Card Issuance",
-        description: "Issue virtual cards in seconds and physical cards within 24 hours with automated workflows and real-time provisioning",
+        description: "Virtual cards ready in seconds; physical cards live within 24 hrs.",
         icon: "⚡"
       },
       {
-        title: "Multi-Brand Support",
-        description: "Full support for Visa, Mastercard, RuPay, and other major card networks with flexible BIN management",
+        title: "Multi-Network Support",
+        description: "Multi-Network Support	Issue Visa, Mastercard, RuPay, and more under your own BIN.",
         icon: "🏦"
       },
       {
-        title: "Advanced Card Controls",
-        description: "Granular spending controls, merchant restrictions, and real-time transaction limits with instant updates",
+        title: "Advanced Spend Controls",
+        description: "Advanced Spend Controls	Real-time merchant filters, velocity rules, and dynamic limits.",
         icon: "🎛️"
       },
       {
-        title: "Real-time Monitoring",
-        description: "Comprehensive dashboard for tracking card usage, transactions, and performance metrics with detailed analytics",
+        title: "White-Label Branding",
+        description: "Fully customize card art, packaging, and mobile app UI.",
         icon: "📊"
       },
       {
@@ -39,8 +39,8 @@ const CardIssuancePage = () => {
         icon: "🔒"
       },
       {
-        title: "White-label Solutions",
-        description: "Fully customizable card designs and mobile apps with your branding and user experience",
+        title: "Real-Time Monitoring",
+        description: "Live dashboards, transaction alerts, and usage breakdowns.",
         icon: "🎨"
       }
     ],
@@ -80,10 +80,10 @@ const CardIssuancePage = () => {
       }
     ],
     benefits: [
-      "Reduce card issuance time from days to minutes with instant virtual cards",
-      "Lower operational costs by up to 60% with automated processes",
-      "Enhanced security with tokenization, encryption, and fraud prevention",
-      "Comprehensive analytics and reporting for data-driven decisions",
+      "Instant Go-Live: Spin up virtual cards instantly and ship physical cards in 24 hours—no more waiting days for provisioning.",
+      "Cost-Efficient Automation: Slash operational overhead by up to 60% with end-to-end automation: onboarding, activation, PIN management, renewals, and more.",
+      "Bank-Grade Security: Tokenization, AES encryption, multi-factor authentication, and built-in fraud detection keep you PCI-DSS Level 1 compliant.",
+      "Data-Driven Decisions: In-depth analytics, customizable dashboards, and exportable reports put spending trends, revenue metrics, and compliance at your fingertips.",
       "24/7 customer support and technical monitoring",
       "Scalable infrastructure supporting millions of cards",
       "Regulatory compliance with global standards",
@@ -156,10 +156,10 @@ const CardIssuancePage = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Corporate Cards", desc: "Employee expense management and corporate spending control", icon: "🏢" },
-                { title: "Prepaid Cards", desc: "Gift cards, travel cards, and general purpose reloadable cards", icon: "🎁" },
-                { title: "Credit Cards", desc: "Consumer and business credit card programs with flexible terms", icon: "💳" },
-                { title: "Virtual Cards", desc: "Instant digital cards for online payments and subscriptions", icon: "📱" }
+                { title: "Corporate Expense", desc: "Issue employee cards with pre-configured budgets and automated expense feeds.", icon: "🏢" },
+                { title: "Prepaid & Gift", desc: "Launch reloadable gift, campus, or payroll cards with simple bulk issuance.", icon: "🎁" },
+                { title: "Virtual-Only Programs", desc: "Enable one-time or subscription-based digital cards for online spend.", icon: "💳" },
+                { title: "Co-Brand & Partner Cards", desc: "White-label partner programs, loyalty or fuel cards under your branding.", icon: "📱" }
               ].map((useCase, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
                   <div className="text-3xl mb-4">{useCase.icon}</div>
@@ -172,8 +172,8 @@ const CardIssuancePage = () => {
         </div>
         
         <ProductFooter 
-          title="Ready to Transform Your Card Issuance?"
-          description="Join leading financial institutions who trust our platform for their card issuance needs. Get started today with our comprehensive card management solution."
+          title="Ready to transform your card business? "
+          description="Contact us today to schedule a demo and see how StackIntel can get your card program live in days."
         />
       </div>
     </Layout>
