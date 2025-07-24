@@ -55,27 +55,27 @@ const page = () => {
     items: [
       {
         title: "Card Stack",
-        description: "Advanced platform for digital card issuance and management solutions.",
+        description: "Launch and manage secure card programs effortlessly, from issuance to processing, with our comprehensive platform.",
         href: "/products/card-issuance",
-        icon: "💳"
+        // icon: "💳"
       },
       {
         title: "StackInflow",
         description: "Comprehensive payment solutions for seamless financial transactions.",
         href: "/products/stackinflow",
-        icon: "💰"
+        // icon: "💰"
       },
       {
         title: "StackRails",
         description: "Next-generation UPI payment infrastructure with comprehensive documentation.",
         href: "https://developer.stackintel.in/",
-        icon: "🚀"
+        // icon: "🚀"
       },
       {
         title: "Smart Stack",
         description: "Intelligent business management solutions with advanced automation capabilities.",
         href: "/products/smart-stack",
-        icon: "🧠"
+        // icon: "🧠"
       }
     ]
   };
