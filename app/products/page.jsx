@@ -104,7 +104,6 @@ const page = () => {
           title={headerData.title}
           subtitle={headerData.subtitle}
           description={headerData.description}
-          icon={headerData.icon}
         />
         <ProductFeatures 
           title={featuresData.title}

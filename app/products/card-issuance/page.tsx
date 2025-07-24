@@ -98,7 +98,6 @@ const CardIssuancePage = () => {
           title={productData.title}
           subtitle={productData.subtitle}
           description={productData.description}
-          icon={productData.icon}
         />
         
         <ProductSection 
