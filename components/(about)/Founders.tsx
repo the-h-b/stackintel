@@ -16,7 +16,7 @@ const ScaleItems = [
     title: "Founder & CEO",
     link: "https://www.linkedin.com/in/salil-chaturvedi-492922300?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAE0F3i4BW3wq3CDoIqXKS93col3OqTdR0_U&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BdYWIuwgHQ1alCxLJg%2F7HTA%3D%3D",
     description:
-      "With a decade of experience in fintech, Salil’s leadership drives StackIntel to continually innovate and deliver.",
+      "With a decade of experience in fintech, Salil's leadership drives StackIntel to continually innovate and deliver.",
     image: FounderImg2,
   },
   {
@@ -56,10 +56,6 @@ const Founders = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
     },
   };
 
@@ -70,6 +66,7 @@ const Founders = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
     >
       <motion.div
         className="w-full lg:w-2/4 flex flex-col justify-center items-center lg:justify-start lg:items-start gap-y-4 md:gap-y-5"

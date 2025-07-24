@@ -55,10 +55,6 @@ const Client = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
     },
   };
 
@@ -69,6 +65,7 @@ const Client = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
     >
       <motion.div
         className="w-full lg:w-2/4 flex flex-col justify-center items-center lg:justify-start lg:items-start gap-y-4 md:gap-y-5"

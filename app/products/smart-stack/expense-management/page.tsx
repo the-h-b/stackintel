@@ -113,7 +113,6 @@ const ExpenseManagementPage = () => {
           title={productData.title}
           subtitle={productData.subtitle}
           description={productData.description}
-          icon={productData.icon}
         />
 
         {/* Expense Categories Section */}
