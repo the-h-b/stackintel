@@ -22,7 +22,7 @@ const ProductFooter: React.FC<ProductFooterProps> = ({ title, description }) => 
             "radial-gradient(circle at 40% 50%, #ffffff 0%, transparent 50%)"
           ]
         }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 8, repeat: Infinity }}
       />
       
       <div className="rounded p-4 md:p-16 relative z-10">

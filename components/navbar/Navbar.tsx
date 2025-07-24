@@ -30,13 +30,15 @@ const Navbar = () => {
       "noopener,noreferrer"
     );
   };
-  const handleProductsDropdown = () => {
+  const handleProductsDropdown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     setProductsDropdown(!productsDropdown);
   };
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (dropdownRef.current && event.target && !dropdownRef.current.contains(event.target as Node)) {
         setProductsDropdown(false);
       }
     };
@@ -48,12 +50,12 @@ const Navbar = () => {
   const products = [
     {
       name: "Card Stack",
-      description: "Advanced platform for digital card issuance and management solutions.",
+      description: "Launch and manage secure card programs effortlessly, from issuance to processing, with our comprehensive platform.",
       features: [  
         { name: "Card Issuance", href: "/products/card-issuance" },
       ],
       href: "/products/card-issuance",
-      icon: "💳"
+      
     },
     {
       name: "StackInflow",
@@ -63,7 +65,7 @@ const Navbar = () => {
         { name: "Payout", href: "/products/stackinflow/payout" }
       ],
       href: "/products/stackinflow",
-      icon: "💰"
+      
     },
     {
       name: "StackRails",
@@ -73,7 +75,7 @@ const Navbar = () => {
         { name: "Documentations", href: "https://developer.stackintel.in/" }
       ],
       href: "https://developer.stackintel.in/",
-      icon: "🚀"
+      
     },
     {
       name: "Smart Stack",
@@ -82,7 +84,7 @@ const Navbar = () => {
         { name: "Expense Management", href: "/products/smart-stack/expense-management" }
       ],
       href: "/products/smart-stack",
-      icon: "🧠"
+      
     }
   ];
   return (
@@ -122,7 +124,7 @@ const Navbar = () => {
               </button>
               
               {productsDropdown && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-[900px] bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100/60 overflow-hidden z-50 animate-slide-in-from-top-2">
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-[900px] bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100/60 overflow-hidden z-50">
                   {/* Arrow Pointer */}
                   <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
                     <div className="w-4 h-4 bg-white/95 border-l border-t border-gray-100/60 transform rotate-45 backdrop-blur-xl"></div>
@@ -131,7 +133,7 @@ const Navbar = () => {
                   {/* Products Row */}
                   <div className="flex divide-x divide-gray-100/60">
                     {products.map((product, index) => (
-                      <div key={index} className="flex-1 p-6 hover:bg-gradient-to-b hover:from-blue-50/30 hover:to-indigo-50/20 transition-all duration-300 group">
+                      <div key={index} className="flex-1 p-6 hover:bg-gradient-to-b hover:from-blue-50/30 hover:to-indigo-50/20 group">
                         {/* Product Header */}
                         <Link
                           href={product.href}
@@ -139,10 +141,10 @@ const Navbar = () => {
                           onClick={() => setProductsDropdown(false)}
                         >
                           <div className="flex items-center gap-3 mb-2">
-                            <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                              <span className="text-lg">{product.icon}</span>
+                            <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl flex items-center justify-center">
+                              <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                             </div>
-                            <h3 className="font-bold text-gray-900 text-base group-hover:text-blue-700 transition-colors duration-300">{product.name}</h3>
+                            <h3 className="font-bold text-gray-900 text-base group-hover:text-blue-700">{product.name}</h3>
                           </div>
                           <p className="text-xs text-gray-600 leading-relaxed mb-3">{product.description}</p>
                         </Link>
@@ -154,7 +156,7 @@ const Navbar = () => {
                               <Link
                                 key={featureIndex}
                                 href={feature.href}
-                                className="block px-3 py-2 text-xs text-gray-700 hover:text-blue-600 hover:bg-blue-50/50 rounded-lg transition-all duration-200"
+                                className="block px-3 py-2 text-xs text-gray-700 hover:text-blue-600 hover:bg-blue-50/50 rounded-lg"
                                 onClick={() => setProductsDropdown(false)}
                               >
                                 • {feature.name}
@@ -166,11 +168,11 @@ const Navbar = () => {
                         {/* Learn More Link */}
                         <Link
                           href={product.href}
-                          className="inline-flex items-center gap-1 mt-3 text-xs text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300"
+                          className="inline-flex items-center gap-1 mt-3 text-xs text-blue-600 hover:text-blue-700 font-medium"
                           onClick={() => setProductsDropdown(false)}
                         >
                           <span>Learn more</span>
-                          <svg className="w-3 h-3 transform group-hover:translate-x-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                           </svg>
                         </Link>
@@ -184,7 +186,7 @@ const Navbar = () => {
                       <p className="text-xs text-gray-600">Explore our complete product ecosystem</p>
                       <Link
                         href="/products"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-xs font-semibold rounded-xl transition-all duration-300 shadow-md hover:shadow-lg"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-xs font-semibold rounded-xl shadow-md hover:shadow-lg"
                         onClick={() => setProductsDropdown(false)}
                       >
                         <span>View All</span>
@@ -261,11 +263,11 @@ const Navbar = () => {
             </button>
             
             {productsDropdown && (
-              <div className="w-full mt-3 bg-white/95 backdrop-blur-xl rounded-xl shadow-lg border border-gray-100/60 overflow-hidden animate-slide-in-from-top-1">
+              <div className="w-full mt-3 bg-white/95 backdrop-blur-xl rounded-xl shadow-lg border border-gray-100/60 overflow-hidden">
                 {/* Mobile Products List */}
                 <div className="divide-y divide-gray-100/40">
                   {products.map((product, index) => (
-                    <div key={index} className="p-4 hover:bg-blue-50/30 transition-all duration-300">
+                    <div key={index} className="p-4 hover:bg-blue-50/30">
                       {/* Product Header */}
                       <Link
                         href={product.href}
@@ -276,7 +278,7 @@ const Navbar = () => {
                         }}
                       >
                         <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center">
-                          <span className="text-sm">{product.icon}</span>
+                          <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                         </div>
                         <div>
                           <h4 className="font-bold text-gray-900 text-sm">{product.name}</h4>
@@ -291,7 +293,7 @@ const Navbar = () => {
                             <Link
                               key={featureIndex}
                               href={feature.href}
-                              className="block text-xs text-gray-600 hover:text-blue-600 py-1 transition-colors duration-200"
+                              className="block text-xs text-gray-600 hover:text-blue-600 py-1"
                               onClick={() => {
                                 setProductsDropdown(false);
                                 setMobileMenu(false);
@@ -315,7 +317,7 @@ const Navbar = () => {
                 <div className="bg-gray-50/50 px-4 py-3 border-t border-gray-100/60">
                   <Link
                     href="/products"
-                    className="flex items-center justify-center gap-2 px-4 py-2.5 text-sm text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 font-semibold rounded-lg transition-all duration-300 shadow-md"
+                    className="flex items-center justify-center gap-2 px-4 py-2.5 text-sm text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 font-semibold rounded-lg shadow-md"
                     onClick={() => {
                       setProductsDropdown(false);
                       setMobileMenu(false);
