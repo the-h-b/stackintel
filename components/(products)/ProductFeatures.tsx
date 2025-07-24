@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 interface Feature {
   title: string;
   description: string;
-  icon: string;
+  icon: string | React.ReactNode;
 }
 
 interface ProductFeaturesProps {
@@ -87,7 +87,13 @@ const ProductFeatures: React.FC<ProductFeaturesProps> = ({ title, features }) =>
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <span className="text-2xl text-white">{feature.icon}</span>
+                    <div className="text-white flex items-center justify-center w-full h-full">
+                      {typeof feature.icon === 'string' ? (
+                        <span className="text-2xl">{feature.icon}</span>
+                      ) : (
+                        <div className="w-8 h-8">{feature.icon}</div>
+                      )}
+                    </div>
                   </motion.div>
                   
                   <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">

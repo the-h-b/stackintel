@@ -12,7 +12,7 @@ const ExpenseManagementPage = () => {
     title: "Expense Management",
     subtitle: "AI-Powered Expense Intelligence",
     description: "Revolutionary expense management solution that combines artificial intelligence, machine learning, and advanced automation to transform how organizations handle expense tracking, approval workflows, and financial compliance.",
-    icon: "💰",
+    // icon: "💰",
     features: [
       {
         title: "Advanced OCR & AI",

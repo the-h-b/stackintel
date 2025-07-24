@@ -126,7 +126,7 @@ const SmartStackPage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 AI-Powered Intelligence
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
                 Advanced artificial intelligence capabilities that transform how you manage business operations
               </p>
             </motion.div>
@@ -222,7 +222,7 @@ const SmartStackPage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Measurable Business Impact
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-2xl text-gray-600">
                 Real results from companies using Smart Stack
               </p>
             </motion.div>

@@ -9,7 +9,7 @@ interface ProductHeaderProps {
   title: string;
   subtitle: string;
   description: string;
-  icon: string;
+  icon: string; 
 }
 
 const ProductHeader: React.FC<ProductHeaderProps> = ({ title, subtitle, description, icon }) => {
@@ -34,13 +34,12 @@ const ProductHeader: React.FC<ProductHeaderProps> = ({ title, subtitle, descript
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <motion.div
-          className="flex items-center gap-3 mb-6"
+          className="mb-6"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <span className="text-4xl md:text-5xl">{icon}</span>
-          <p className="text-base md:text-lg text-[#2634BB] font-bold">
+          <p className="text-lg md:text-3xl text-[#2634BB] font-bold">
             {subtitle}
           </p>
         </motion.div>

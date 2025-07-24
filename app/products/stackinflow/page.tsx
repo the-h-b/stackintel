@@ -93,7 +93,7 @@ const StackInflowPage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Trusted by Industry Leaders
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-2xl text-gray-600">
                 Performance metrics that speak for themselves
               </p>
             </div>
@@ -132,7 +132,7 @@ const StackInflowPage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Easy Integration, Powerful Results
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-2xl text-gray-600">
                 Get started in minutes with our developer-friendly APIs
               </p>
             </div>

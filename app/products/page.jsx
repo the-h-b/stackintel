@@ -11,7 +11,7 @@ const page = () => {
     title: "Comprehensive Financial Technology Solutions",
     subtitle: "StackIntel Products",
     description: "Discover our suite of innovative fintech products designed to streamline your business operations, enhance security, and drive growth in the digital economy.",
-    icon: "🚀"
+    // icon: "🚀"
   };
 
   const featuresData = {

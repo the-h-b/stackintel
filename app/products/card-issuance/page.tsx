@@ -11,7 +11,7 @@ const CardIssuancePage = () => {
     title: "Card Issuance with StackIntel",
     subtitle: "Advanced Digital Card Solutions",
     description: "Launch and manage your own card programs—virtual, physical, or hybrid—in minutes, not months. Our API-first platform gives you full lifecycle control, enterprise-grade security, and real-time insights, so you can focus on growing your business, not your infrastructure.",
-    icon: "💳",
+    // icon: "💳",
     features: [
       {
         title: "Instant Card Issuance",
@@ -118,7 +118,7 @@ const CardIssuancePage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Comprehensive Card Management Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
                 Everything you need to launch, manage, and scale your card program
               </p>
             </div>
@@ -149,7 +149,7 @@ const CardIssuancePage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Perfect for Every Use Case
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-2xl text-gray-600">
                 From corporate cards to consumer programs, we've got you covered
               </p>
             </div>
