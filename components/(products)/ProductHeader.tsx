@@ -9,7 +9,7 @@ interface ProductHeaderProps {
   title: string;
   subtitle: string;
   description: string;
-  icon: string; 
+  icon?: string; 
 }
 
 const ProductHeader: React.FC<ProductHeaderProps> = ({ title, subtitle, description, icon }) => {
