@@ -46,14 +46,14 @@ const SmartStackPage = () => {
         icon: "🔒"
       }
     ],
-    services: [
-      {
-        title: "Expense Management",
-        description: "AI-powered expense tracking with automated policy compliance and real-time reporting",
-        href: "/products/smart-stack/expense-management",
-        icon: "💰"
-      }
-    ],
+    // services: [
+    //   {
+    //     title: "Expense Management",
+    //     description: "AI-powered expense tracking with automated policy compliance and real-time reporting",
+    //     href: "/products/smart-stack/expense-management",
+    //     icon: "💰"
+    //   }
+    // ],
     aiCapabilities: [
       {
         title: "Smart Receipt Processing",
@@ -173,10 +173,10 @@ const SmartStackPage = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <ProductItems 
+          {/* <ProductItems 
             title="Our Smart Solutions"
             items={productData.services}
-          />
+          /> */}
         </motion.div>
         
         <motion.div

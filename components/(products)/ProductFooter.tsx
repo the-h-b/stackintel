@@ -67,7 +67,7 @@ const ProductFooter: React.FC<ProductFooterProps> = ({ title, description }) => 
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="flex items-center gap-2">
-                  Get Started Today
+                  Book a Demo Today
                   <motion.svg 
                     className="w-4 h-4" 
                     fill="none" 
@@ -98,7 +98,7 @@ const ProductFooter: React.FC<ProductFooterProps> = ({ title, description }) => 
             >
               <Image
                 src={ProductFooterImg}
-                alt="Get Started Today"
+                alt="Book a Demo Today"
                 className="h-auto w-[100%] md:w-[60%]"
               />
             </motion.div>

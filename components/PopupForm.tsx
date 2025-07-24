@@ -90,7 +90,7 @@ const PopupForm = ({ handleCloseModal, isModalOpen }: ModalProps) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[1000]">
       <div className="bg-white w-[90%] md:w-[50%] lg:w-[40%] p-6 rounded-lg shadow-lg relative">
-        <h2 className="text-xl font-semibold mb-4 text-left">Get Started</h2>
+        <h2 className="text-xl font-semibold mb-4 text-left">Book a Demo</h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <input
             type="text"

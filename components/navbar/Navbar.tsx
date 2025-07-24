@@ -50,7 +50,7 @@ const Navbar = () => {
   const products = [
     {
       name: "Card Stack",
-      description: "Launch and manage secure card programs effortlessly, from issuance to processing, with our comprehensive platform.",
+      description: "Facilitating the secure and swift authorization, clearing, and settlement of electronic payments between cardholders, merchants, and financial institutions.",
       features: [  
         { name: "Card Issuance", href: "/products/card-issuance" },
       ],
@@ -62,24 +62,23 @@ const Navbar = () => {
       description: "Comprehensive payment solutions for seamless financial transactions.",
       features: [
         { name: "Payin", href: "/products/stackinflow/payin" },
-        { name: "Payout", href: "/products/stackinflow/payout" }
+        
       ],
       href: "/products/stackinflow",
       
     },
     {
       name: "StackRails",
-      description: "Next-generation UPI payment infrastructure with comprehensive documentation.",
+      description: "Comprehensive financial platform enabling businesses to execute efficient outbound payments via secure NEFT and IMPS systems.",
       features: [
-        { name: "Upi Infrastructure", href: "https://developer.stackintel.in/" },
-        { name: "Documentations", href: "https://developer.stackintel.in/" }
+        { name: "Payout", href: "/products/stackinflow/payout" },
       ],
-      href: "https://developer.stackintel.in/",
+      href: "/products/stackinflow/payout",
       
     },
     {
       name: "Smart Stack",
-      description: "Intelligent business management solutions with advanced automation capabilities.",
+      description: "Automating expense management, providing real-time financial control and insights from capture to reporting.",
       features: [
         { name: "Expense Management", href: "/products/smart-stack/expense-management" }
       ],
@@ -218,7 +217,7 @@ const Navbar = () => {
               onClick={handleOpenModal}
               className="hidden lg:block px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
-              Get Started
+              Book a Demo
             </button>
           </div>
           {/* Login Button */}
@@ -350,7 +349,7 @@ const Navbar = () => {
             onClick={handleOpenModal}
             className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-md mt-2"
           >
-            Get Started
+            Book a Demo
           </button>
           <button
             onClick={handleLogin}

@@ -44,20 +44,20 @@ const StackInflowPage = () => {
         icon: "🌍"
       }
     ],
-    services: [
-      {
-        title: "Payin",
-        description: "Accept payments from customers through multiple payment methods with optimized success rates",
-        href: "/products/stackinflow/payin",
-        icon: "📥"
-      },
-      {
-        title: "Payout",
-        description: "Send payments to vendors, employees, and partners efficiently with bulk processing capabilities",
-        href: "/products/stackinflow/payout",
-        icon: "📤"
-      }
-    ],
+    // services: [
+    //   {
+    //     title: "Payin",
+    //     description: "Accept payments from customers through multiple payment methods with optimized success rates",
+    //     href: "/products/stackinflow/payin",
+    //     icon: "📥"
+    //   },
+    //   {
+    //     title: "Payout",
+    //     description: "Send payments to vendors, employees, and partners efficiently with bulk processing capabilities",
+    //     href: "/products/stackinflow/payout",
+    //     icon: "📤"
+    //   }
+    // ],
     industryStats: [
       { label: "Transaction Success Rate", value: "99.2%", description: "Industry-leading success rates" },
       { label: "Processing Speed", value: "<2s", description: "Average transaction time" },
@@ -110,10 +110,10 @@ const StackInflowPage = () => {
           </div>
         </div>
         
-        <ProductItems 
+        {/* <ProductItems 
           title="Our Payment Services"
           items={productData.services}
-        />
+        /> */}
         
         <ProductSection 
           title="Why Choose StackInflow?"
@@ -133,7 +133,7 @@ const StackInflowPage = () => {
                 Easy Integration, Powerful Results
               </h2>
               <p className="text-2xl text-gray-600">
-                Get started in minutes with our developer-friendly APIs
+                Book a demo in minutes with our developer-friendly APIs
               </p>
             </div>
             
