@@ -101,7 +101,7 @@ const CardIssuancePage = () => {
         />
         
         <ProductSection 
-          title="Why Choose Our Card Issuance Platform?"
+          title="Why Choose Our Card Processing Platform?"
           benefits={productData.benefits}
         />
         
