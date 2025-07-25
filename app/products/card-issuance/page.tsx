@@ -8,13 +8,13 @@ import ProductFooter from '../../../components/(products)/ProductFooter';
 
 const CardIssuancePage = () => {
   const productData = {
-    title: "Card Processing Made Easy with StackIntel",
+    title: "Card Processing and Issuance - Made Easy with StackIntel",
     subtitle: "Advanced Digital Card Solutions",
     description: "Launch and manage your own card programs—virtual, physical, or hybrid—in minutes, not months. Our API-first platform gives you full lifecycle control, enterprise-grade security, and real-time insights, so you can focus on growing your business, not your infrastructure.",
     // icon: "💳",
     features: [
       {
-        title: "Instant Card Processing",
+        title: "Instant Card Issuance",
         description: "Virtual cards ready in seconds; physical cards live within 24 hrs.",
         icon: "⚡"
       },

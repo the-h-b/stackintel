@@ -52,7 +52,7 @@ const Navbar = () => {
       name: "Card Stack",
       description: "Facilitating the secure and swift authorization, clearing, and settlement of electronic payments between cardholders, merchants, and financial institutions.",
       features: [
-        { name: "Card Processing", href: "/products/card-issuance" },
+        { name: "Card Processor & issuance", href: "/products/card-issuance" },
       ],
       href: "/products/card-issuance",
     },
