@@ -58,7 +58,7 @@ const Navbar = () => {
     },
     {
       name: "StackInflow",
-      description: "Comprehensive payment solutions for seamless financial transactions.",
+      description: "Helps businesses easily and securely accept payments from customers using almost any method, including cards, bank transfers, and digital wallets.",
       features: [
         { name: "Payin", href: "/products/stackinflow/payin" },
       ],
