@@ -51,21 +51,18 @@ const Navbar = () => {
     {
       name: "Card Stack",
       description: "Facilitating the secure and swift authorization, clearing, and settlement of electronic payments between cardholders, merchants, and financial institutions.",
-      features: [  
-        { name: "Card Issuance", href: "/products/card-issuance" },
+      features: [
+        { name: "Card Processing", href: "/products/card-issuance" },
       ],
       href: "/products/card-issuance",
-      
     },
     {
       name: "StackInflow",
       description: "Comprehensive payment solutions for seamless financial transactions.",
       features: [
         { name: "Payin", href: "/products/stackinflow/payin" },
-        
       ],
       href: "/products/stackinflow",
-      
     },
     {
       name: "StackRails",
@@ -74,7 +71,6 @@ const Navbar = () => {
         { name: "Payout", href: "/products/stackinflow/payout" },
       ],
       href: "/products/stackinflow/payout",
-      
     },
     {
       name: "Smart Stack",
@@ -83,7 +79,6 @@ const Navbar = () => {
         { name: "Expense Management", href: "/products/smart-stack/expense-management" }
       ],
       href: "/products/smart-stack",
-      
     }
   ];
   return (
@@ -342,6 +337,7 @@ const Navbar = () => {
           <Link
             className="text-base font-medium tracking-wide text-gray-700 hover:text-blue-600 transition-all duration-300 py-2"
             href="/contacts"
+            onClick={() => setMobileMenu(false)}
           >
             Contact Us
           </Link>
