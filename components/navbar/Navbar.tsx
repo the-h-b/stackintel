@@ -49,7 +49,7 @@ const Navbar = () => {
   }, []);
   const products = [
     {
-      name: "Card Stack",
+      name: "CardStack",
       description: "Facilitating the secure and swift authorization, clearing, and settlement of electronic payments between cardholders, merchants, and financial institutions.",
       features: [
         { name: "Card Processing & issuance", href: "/products/card-issuance" },
@@ -73,7 +73,7 @@ const Navbar = () => {
       href: "/products/stackinflow/payout",
     },
     {
-      name: "Smart Stack",
+      name: "SmartStack",
       description: "Automating expense management, providing real-time financial control and insights from capture to reporting.",
       features: [
         { name: "Expense Management", href: "/products/smart-stack/expense-management" }
