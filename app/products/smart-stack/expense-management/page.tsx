@@ -6,6 +6,16 @@ import ProductHeader from '../../../../components/(products)/ProductHeader';
 import ProductSection from '../../../../components/(products)/ProductSection';
 import ProductFeatures from '../../../../components/(products)/ProductFeatures';
 import ProductFooter from '../../../../components/(products)/ProductFooter';
+import { 
+  HiOutlineCamera, 
+  HiOutlineCurrencyDollar, 
+  HiOutlineChartBar
+} from "react-icons/hi";
+import { 
+  HiOutlineCog6Tooth,
+  HiOutlineClipboardDocumentList,
+  HiOutlineDevicePhoneMobile
+} from "react-icons/hi2";
 
 const ExpenseManagementPage = () => {
   const productData = {
@@ -17,32 +27,32 @@ const ExpenseManagementPage = () => {
       {
         title: "Advanced OCR & AI",
         description: "99.2% accurate data extraction from receipts, invoices, and documents with intelligent categorization",
-        icon: "📸"
+        icon: <HiOutlineCamera />
       },
       {
         title: "Smart Workflows",
         description: "AI-powered approval routing with dynamic workflows based on expense type, amount, and policies",
-        icon: "⚙️"
+        icon: <HiOutlineCog6Tooth />
       },
       {
         title: "Intelligent Compliance",
         description: "Real-time policy enforcement with AI-powered fraud detection and anomaly identification",
-        icon: "📋"
+        icon: <HiOutlineClipboardDocumentList />
       },
       {
         title: "Global Currency Support",
         description: "Handle 150+ currencies with real-time conversion rates and tax calculations",
-        icon: "💱"
+        icon: <HiOutlineCurrencyDollar />
       },
       {
         title: "Predictive Analytics",
         description: "Advanced reporting with spending forecasts, budget alerts, and trend analysis",
-        icon: "📊"
+        icon: <HiOutlineChartBar />
       },
       {
         title: "Enterprise Mobile App",
         description: "Full-featured mobile apps with offline capabilities and voice-to-text expense entry",
-        icon: "📱"
+        icon: <HiOutlineDevicePhoneMobile />
       }
     ],
     expenseTypes: [

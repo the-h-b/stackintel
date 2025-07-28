@@ -4,6 +4,20 @@ import ProductItems from "../../components/(products)/ProductItems";
 import ProductSection from "../../components/(products)/ProductSection";
 import ProductSection2 from "../../components/(products)/ProductSection2";
 import ProductFooter from "../../components/(products)/ProductFooter";
+import { 
+  HiOutlineShieldCheck, 
+  HiOutlineLink, 
+  HiOutlineChartBar, 
+  HiOutlineTrendingUp,
+  HiOutlineCreditCard,
+  HiOutlineCurrencyDollar
+} from "react-icons/hi";
+import { 
+  HiOutlineBolt,
+  HiOutlineLifebuoy,
+  HiOutlineRocketLaunch,
+  HiOutlineCpuChip
+} from "react-icons/hi2";
 
 const page = () => {
   // Product data
@@ -20,32 +34,32 @@ const page = () => {
       {
         title: "Advanced Security",
         description: "Enterprise-grade encryption and fraud detection to protect your data and transactions with multi-layer security protocols.",
-        icon: "🔒"
+        icon: <HiOutlineShieldCheck />
       },
       {
         title: "Real-time Processing",
         description: "Lightning-fast transaction processing with real-time updates and instant notifications for seamless operations.",
-        icon: "⚡"
+        icon: <HiOutlineBolt />
       },
       {
         title: "Seamless Integration",
         description: "Easy-to-implement APIs and SDKs that integrate smoothly with your existing systems and workflows.",
-        icon: "🔗"
+        icon: <HiOutlineLink />
       },
       {
         title: "Analytics & Insights",
         description: "Comprehensive dashboard with detailed analytics and actionable insights to drive informed business decisions.",
-        icon: "📊"
+        icon: <HiOutlineChartBar />
       },
       {
         title: "24/7 Support",
         description: "Round-the-clock technical support and customer service to ensure your operations run smoothly.",
-        icon: "🛟"
+        icon: <HiOutlineLifebuoy />
       },
       {
         title: "Scalable Solutions",
         description: "Flexible architecture that grows with your business, from startup to enterprise-level operations.",
-        icon: "📈"
+        icon: <HiOutlineTrendingUp />
       }
     ]
   };

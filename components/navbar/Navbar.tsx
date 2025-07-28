@@ -1,15 +1,12 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import HeroImage from "../../assets/static/stacklogo.png";
-import Button from "../Button";
 import PopupForm from "../PopupForm";
 import Link from "next/link";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { IoChevronDown } from "react-icons/io5";
+import { HiOutlineMenu, HiMinus } from "react-icons/hi";
+import { HiChevronDown, HiArrowRight } from "react-icons/hi2";
 const Navbar = () => {
-  const pathname = usePathname();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [productsDropdown, setProductsDropdown] = useState(false);
@@ -111,7 +108,7 @@ const Navbar = () => {
                 className="relative flex items-center gap-2 text-base font-medium text-gray-700 hover:text-blue-600 transition-all duration-300 tracking-wide group py-2"
               >
                 Products
-                <IoChevronDown 
+                <HiChevronDown 
                   className={`w-4 h-4 transition-all duration-300 ${productsDropdown ? 'rotate-180 text-blue-600' : 'group-hover:text-blue-600'}`}
                 />
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full rounded-full"></span>
@@ -150,10 +147,11 @@ const Navbar = () => {
                               <Link
                                 key={featureIndex}
                                 href={feature.href}
-                                className="block px-3 py-2 text-xs text-gray-700 hover:text-blue-600 hover:bg-blue-50/50 rounded-lg"
+                                className="flex items-center gap-2 px-3 py-2 text-xs text-gray-700 hover:text-blue-600 hover:bg-blue-50/50 rounded-lg"
                                 onClick={() => setProductsDropdown(false)}
                               >
-                                • {feature.name}
+                                <HiMinus className="w-3 h-3 text-gray-400" />
+                                {feature.name}
                               </Link>
                             ))}
                           </div>
@@ -166,9 +164,7 @@ const Navbar = () => {
                           onClick={() => setProductsDropdown(false)}
                         >
                           <span>Learn more</span>
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
+                          <HiArrowRight className="w-3 h-3" />
                         </Link>
                       </div>
                     ))}
@@ -184,9 +180,7 @@ const Navbar = () => {
                         onClick={() => setProductsDropdown(false)}
                       >
                         <span>View All</span>
-                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
+                        <HiArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
                   </div>
@@ -231,7 +225,7 @@ const Navbar = () => {
             aria-label="Open mobile menu"
             title="Open mobile menu"
           >
-            <RxHamburgerMenu size={24} className="text-gray-700 hover:text-blue-600" />
+            <HiOutlineMenu size={24} className="text-gray-700 hover:text-blue-600" />
           </button>
         </div>
       </nav>
@@ -251,7 +245,7 @@ const Navbar = () => {
               className="flex items-center justify-center gap-2 text-base font-medium text-gray-700 hover:text-blue-600 transition-all duration-300 tracking-wide w-full py-2"
             >
               Products
-              <IoChevronDown 
+              <HiChevronDown 
                 className={`w-4 h-4 transition-all duration-300 ${productsDropdown ? 'rotate-180 text-blue-600' : ''}`}
               />
             </button>
@@ -287,13 +281,14 @@ const Navbar = () => {
                             <Link
                               key={featureIndex}
                               href={feature.href}
-                              className="block text-xs text-gray-600 hover:text-blue-600 py-1"
+                              className="flex items-center text-xs text-gray-600 hover:text-blue-600 py-1"
                               onClick={() => {
                                 setProductsDropdown(false);
                                 setMobileMenu(false);
                               }}
                             >
-                              • {feature.name}
+                              <HiMinus className="w-3 h-3 text-gray-400 mr-2" />
+                              {feature.name}
                             </Link>
                           ))}
                           {product.features.length > 3 && (
@@ -318,9 +313,7 @@ const Navbar = () => {
                     }}
                   >
                     <span>View All Products</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                    <HiArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>

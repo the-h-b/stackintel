@@ -7,33 +7,44 @@ import ProductSection from '../../../components/(products)/ProductSection';
 import ProductFeatures from '../../../components/(products)/ProductFeatures';
 import ProductItems from '../../../components/(products)/ProductItems';
 import ProductFooter from '../../../components/(products)/ProductFooter';
+import { 
+  HiOutlineCode, 
+  HiOutlineShieldCheck,
+  HiOutlineBookOpen
+} from "react-icons/hi";
+import { 
+  HiOutlineRocketLaunch,
+  HiOutlineBuildingLibrary,
+  HiOutlineBolt,
+  HiOutlineArrowPath
+} from "react-icons/hi2";
 
 const StackRailsPage = () => {
   const productData = {
     title: "StackRails",
     subtitle: "Next-Generation UPI Infrastructure",
     description: "Advanced UPI payment infrastructure with comprehensive documentation and developer-friendly tools. Build, deploy, and scale UPI-based payment solutions with confidence.",
-    icon: "🚀",
+    icon: <HiOutlineRocketLaunch />,
     features: [
       {
         title: "High-Performance Infrastructure",
         description: "Scalable UPI infrastructure capable of handling millions of transactions",
-        icon: "⚡"
+        icon: <HiOutlineBolt />
       },
       {
         title: "Developer-First Approach",
         description: "Comprehensive APIs, SDKs, and tools for seamless integration",
-        icon: "👨‍💻"
+        icon: <HiOutlineCode />
       },
       {
         title: "Real-time Processing",
         description: "Instant UPI transaction processing with real-time status updates",
-        icon: "🔄"
+        icon: <HiOutlineArrowPath />
       },
       {
         title: "Advanced Security",
         description: "Multi-layered security with encryption, tokenization, and fraud detection",
-        icon: "🔒"
+        icon: <HiOutlineShieldCheck />
       }
     ],
     services: [
@@ -41,19 +52,19 @@ const StackRailsPage = () => {
         title: "UPI Infrastructure",
         description: "Robust and scalable UPI payment infrastructure for enterprises",
         href: "/products/stackrails/upi-infrastructure",
-        icon: "🏗️"
+        icon: <HiOutlineBuildingLibrary />
       },
       {
         title: "Documentations",
         description: "Comprehensive documentation and developer resources",
         href: "/products/stackrails/documentations",
-        icon: "📚"
+        icon: <HiOutlineBookOpen />
       },
       {
         title: "Developer Hub",
         description: "Complete developer portal with APIs, SDKs, and integration guides",
         href: "/developers",
-        icon: "👨‍💻"
+        icon: <HiOutlineCode />
       }
     ],
     benefits: [

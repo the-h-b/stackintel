@@ -5,43 +5,54 @@ import ProductSection from '../../../components/(products)/ProductSection';
 import ProductFeatures from '../../../components/(products)/ProductFeatures';
 import ProductItems from '../../../components/(products)/ProductItems';
 import ProductFooter from '../../../components/(products)/ProductFooter';
+import { 
+  HiOutlineChartBar, 
+  HiOutlineShieldCheck, 
+  HiOutlineGlobeAlt,
+  HiOutlineCurrencyDollar
+} from "react-icons/hi";
+import { 
+  HiOutlineArrowPath, 
+  HiOutlineCpuChip, 
+  HiOutlineBolt
+} from "react-icons/hi2";
 
 const StackInflowPage = () => {
   const productData = {
     title: "StackInflow",
     subtitle: "Comprehensive Payment Solutions",
     description: "Complete payment infrastructure for modern businesses. Handle both incoming and outgoing payments with enterprise-grade security, real-time processing, and intelligent routing for maximum success rates.",
-    icon: "💰",
+    icon: <HiOutlineCurrencyDollar />,
     features: [
       {
         title: "Multi-Channel Payments",
         description: "Accept payments through 100+ channels including cards, UPI, wallets, net banking, and international methods",
-        icon: "🔄"
+        icon: <HiOutlineArrowPath />
       },
       {
         title: "Smart Payment Routing",
         description: "AI-powered routing to optimize success rates and minimize transaction costs across multiple processors",
-        icon: "🧠"
+        icon: <HiOutlineCpuChip />
       },
       {
         title: "Real-time Processing",
         description: "Process payments instantly with sub-second response times and real-time status updates",
-        icon: "⚡"
+        icon: <HiOutlineBolt />
       },
       {
         title: "Advanced Analytics",
         description: "Comprehensive dashboard with detailed analytics, success rate optimization, and business intelligence",
-        icon: "📊"
+        icon: <HiOutlineChartBar />
       },
       {
         title: "Secure Infrastructure",
         description: "Bank-grade security with PCI DSS Level 1 compliance, tokenization, and advanced fraud detection",
-        icon: "🔒"
+        icon: <HiOutlineShieldCheck />
       },
       {
         title: "Global Reach",
         description: "Support for international payments with multi-currency processing and local payment methods",
-        icon: "🌍"
+        icon: <HiOutlineGlobeAlt />
       }
     ],
     // services: [

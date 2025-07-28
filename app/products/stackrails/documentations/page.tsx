@@ -5,43 +5,55 @@ import ProductSection from '../../../../components/(products)/ProductSection';
 import ProductFeatures from '../../../../components/(products)/ProductFeatures';
 import ProductFooter from '../../../../components/(products)/ProductFooter';
 import Link from 'next/link';
+import { 
+  HiOutlineBookOpen, 
+  HiOutlineDocumentText, 
+  HiOutlineCube
+} from "react-icons/hi";
+import { 
+  HiOutlineWrenchScrewdriver, 
+  HiOutlineComputerDesktop, 
+  HiOutlineRocketLaunch,
+  HiOutlineBeaker,
+  HiOutlineVideoCamera
+} from "react-icons/hi2";
 
 const DocumentationsPage = () => {
   const productData = {
     title: "Documentations",
     subtitle: "Comprehensive Developer Resources",
     description: "Complete documentation, guides, and resources to help developers integrate and build with StackRails UPI infrastructure efficiently and effectively.",
-    icon: "📚",
+    icon: <HiOutlineBookOpen />,
     features: [
       {
         title: "API Documentation",
         description: "Detailed API references with examples and interactive testing tools",
-        icon: "📖"
+        icon: <HiOutlineDocumentText />
       },
       {
         title: "Integration Guides",
         description: "Step-by-step integration guides for different platforms and languages",
-        icon: "🔧"
+        icon: <HiOutlineWrenchScrewdriver />
       },
       {
         title: "Code Examples",
         description: "Ready-to-use code samples in multiple programming languages",
-        icon: "💻"
+        icon: <HiOutlineComputerDesktop />
       },
       {
         title: "SDK Libraries",
         description: "Official SDKs for popular programming languages and frameworks",
-        icon: "📦"
+        icon: <HiOutlineCube />
       },
       {
         title: "Testing Tools",
         description: "Sandbox environment and testing tools for development and QA",
-        icon: "🧪"
+        icon: <HiOutlineBeaker />
       },
       {
         title: "Video Tutorials",
         description: "Comprehensive video tutorials and webinars for developers",
-        icon: "🎥"
+        icon: <HiOutlineVideoCamera />
       }
     ],
     benefits: [
@@ -88,14 +100,14 @@ const DocumentationsPage = () => {
                 href="/developers"
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-colors duration-300 inline-flex items-center gap-2"
               >
-                <span>🚀</span>
+                <HiOutlineRocketLaunch className="w-5 h-5" />
                 Visit Developer Hub
               </Link>
               <Link
                 href="/developers/quickstart"
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300 inline-flex items-center gap-2"
               >
-                <span>📚</span>
+                <HiOutlineBookOpen className="w-5 h-5" />
                 Quick Start Guide
               </Link>
             </div>

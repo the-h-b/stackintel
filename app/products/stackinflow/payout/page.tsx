@@ -6,68 +6,59 @@ import ProductHeader from '../../../../components/(products)/ProductHeader';
 import ProductSection from '../../../../components/(products)/ProductSection';
 import ProductFeatures from '../../../../components/(products)/ProductFeatures';
 import ProductFooter from '../../../../components/(products)/ProductFooter';
+import { 
+  HiOutlineCheckCircle,
+  HiOutlineChartBar,
+  HiOutlineShieldCheck,
+  HiOutlineUsers,
+  HiOutlineUserGroup,
+  HiOutlineGift
+} from "react-icons/hi";
+import { 
+  HiOutlineClipboardDocumentList,
+  HiOutlineArrowPath,
+  HiOutlineCog6Tooth,
+  HiOutlineMagnifyingGlass,
+  HiOutlineBuildingOffice2,
+  HiOutlineArrowLeft
+} from "react-icons/hi2";
 
 const PayoutPage = () => {
   const productData = {
     title: "StackIntel Payout Solutions",
     subtitle: "Send Payments Efficiently",
     description: "Comprehensive payout capabilities for businesses to disburse funds to vendors, employees, partners, and customers—with speed, security, transparency, and full automation.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
-      </svg>
-    ),
+    icon: <HiOutlineArrowLeft />,
     features: [
       {
         title: "Bulk Payout Processing",
         description: "Execute up to 100,000 payments at once with intelligent batch handling.",
-        icon: (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-          </svg>
-        )
+        icon: <HiOutlineClipboardDocumentList />
       },
       {
         title: "Multi-Mode Transfers",
         description: "IMPS, NEFT, RTGS, UPI, digital wallets, and international wires.",
-        icon: (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-          </svg>
-        )
+        icon: <HiOutlineArrowPath />
       },
       {
         title: "Real-time Verification",
         description: "Instant beneficiary checks via penny-drop and account validation.",
-        icon: (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        )
+        icon: <HiOutlineCheckCircle />
       },
       {
         title: "Smart Workflows",
         description: "Schedule automated payouts, multi-level approvals, and rule-based triggers.",
-        icon: (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-        )
+        icon: <HiOutlineCog6Tooth />
       },
       {
         title: "Compliance & Audit",
         description: "Built-in TDS computation, regulatory reports, and full audit trails.",
-        icon: (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-        )
+        icon: <HiOutlineShieldCheck />
       },
       {
         title: "Advanced Tracking",
         description: "Live status updates, detailed history, and failure analysis dashboards.",
-        icon: "🔍"
+        icon: <HiOutlineMagnifyingGlass />
       }
     ],
     payoutTypes: [
@@ -75,25 +66,25 @@ const PayoutPage = () => {
         title: "Vendor Payments",
         description: "Automate supplier and vendor payments with approval workflows",
         features: ["Bulk processing", "Invoice matching", "Tax calculations", "Approval chains"],
-        icon: "🏢"
+        icon: <HiOutlineBuildingOffice2 />
       },
       {
         title: "Employee Payroll",
         description: "Streamlined salary and reimbursement processing",
         features: ["Salary disbursement", "Expense reimbursements", "Bonus payments", "Tax deductions"],
-        icon: "👥"
+        icon: <HiOutlineUsers />
       },
       {
         title: "Customer Refunds",
         description: "Quick and efficient customer refund processing",
         features: ["Instant refunds", "Partial refunds", "Refund tracking", "Customer notifications"],
-        icon: "💰"
+        icon: <HiOutlineGift />
       },
       {
         title: "Partner Commissions",
         description: "Automated commission and incentive payments",
         features: ["Commission calculation", "Performance bonuses", "Referral payments", "Revenue sharing"],
-        icon: "🤝"
+        icon: <HiOutlineUserGroup />
       }
     ],
     benefits: [

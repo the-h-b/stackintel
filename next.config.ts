@@ -15,6 +15,13 @@ const nextConfig: NextConfig = {
         os: false,
       };
     }
+    
+    // Handle SVG imports
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    
     return config;
   },
 };

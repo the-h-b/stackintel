@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { HiArrowRight } from "react-icons/hi2";
 
 interface Feature {
   title: string;
@@ -144,16 +145,12 @@ const ProductFeatures: React.FC<ProductFeaturesProps> = ({ title, features }) =>
             viewport={{ once: true }}
           >
             <span>Get Started</span>
-            <motion.svg 
-              className="w-5 h-5" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
+            <motion.div
               animate={{ x: [0, 5, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </motion.svg>
+              <HiOutlineArrowRight className="w-5 h-5" />
+            </motion.div>
           </motion.a>
         </motion.div>
       </div>

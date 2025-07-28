@@ -5,6 +5,20 @@ import ProductSection from '../../../components/(products)/ProductSection';
 import ProductFeatures from '../../../components/(products)/ProductFeatures';
 import ProductSection2 from '../../../components/(products)/ProductSection2';
 import ProductFooter from '../../../components/(products)/ProductFooter';
+import { 
+  HiOutlineChartBar, 
+  HiOutlineShieldCheck, 
+  HiOutlineGift,
+  HiOutlineCreditCard
+} from "react-icons/hi";
+import { 
+  HiOutlineBolt,
+  HiOutlineBuilding,
+  HiOutlineCog6Tooth,
+  HiOutlinePaintBrush,
+  HiOutlineBuildingOffice2,
+  HiOutlineDevicePhoneMobile
+} from "react-icons/hi2";
 
 const CardIssuancePage = () => {
   const productData = {
@@ -16,32 +30,32 @@ const CardIssuancePage = () => {
       {
         title: "Instant Card Issuance",
         description: "Virtual cards ready in seconds; physical cards live within 24 hrs.",
-        icon: "⚡"
+        icon: <HiOutlineBolt />
       },
       {
         title: "Multi-Network Support",
         description: "Multi-Network Support	Issue Visa, Mastercard, RuPay, and more under your own BIN.",
-        icon: "🏦"
+        icon: <HiOutlineBuilding />
       },
       {
         title: "Advanced Spend Controls",
         description: "Advanced Spend Controls	Real-time merchant filters, velocity rules, and dynamic limits.",
-        icon: "🎛️"
+        icon: <HiOutlineCog6Tooth />
       },
       {
         title: "White-Label Branding",
         description: "Fully customize card art, packaging, and mobile app UI.",
-        icon: "📊"
+        icon: <HiOutlinePaintBrush />
       },
       {
         title: "Security & Compliance",
         description: "PCI DSS Level 1 compliant with advanced fraud detection, tokenization, and multi-factor authentication",
-        icon: "🔒"
+        icon: <HiOutlineShieldCheck />
       },
       {
         title: "Real-Time Monitoring",
         description: "Live dashboards, transaction alerts, and usage breakdowns.",
-        icon: "🎨"
+        icon: <HiOutlineChartBar />
       }
     ],
     additionalFeatures: [
@@ -155,13 +169,13 @@ const CardIssuancePage = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Corporate Expense", desc: "Issue employee cards with pre-configured budgets and automated expense feeds.", icon: "🏢" },
-                { title: "Prepaid & Gift", desc: "Launch reloadable gift, campus, or payroll cards with simple bulk issuance.", icon: "🎁" },
-                { title: "Virtual-Only Programs", desc: "Enable one-time or subscription-based digital cards for online spend.", icon: "💳" },
-                { title: "Co-Brand & Partner Cards", desc: "White-label partner programs, loyalty or fuel cards under your branding.", icon: "📱" }
+                { title: "Corporate Expense", desc: "Issue employee cards with pre-configured budgets and automated expense feeds.", icon: <HiOutlineBuildingOffice2 /> },
+                { title: "Prepaid & Gift", desc: "Launch reloadable gift, campus, or payroll cards with simple bulk issuance.", icon: <HiOutlineGift /> },
+                { title: "Virtual-Only Programs", desc: "Enable one-time or subscription-based digital cards for online spend.", icon: <HiOutlineCreditCard /> },
+                { title: "Co-Brand & Partner Cards", desc: "White-label partner programs, loyalty or fuel cards under your branding.", icon: <HiOutlineDevicePhoneMobile /> }
               ].map((useCase, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                  <div className="text-3xl mb-4">{useCase.icon}</div>
+                  <div className="text-3xl mb-4 flex justify-center text-blue-600">{useCase.icon}</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase.title}</h3>
                   <p className="text-sm text-gray-600">{useCase.desc}</p>
                 </div>

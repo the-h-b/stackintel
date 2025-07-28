@@ -4,43 +4,53 @@ import ProductHeader from '../../../../components/(products)/ProductHeader';
 import ProductSection from '../../../../components/(products)/ProductSection';
 import ProductFeatures from '../../../../components/(products)/ProductFeatures';
 import ProductFooter from '../../../../components/(products)/ProductFooter';
+import { 
+  HiOutlineTrendingUp, 
+  HiOutlineChartBar, 
+  HiOutlineShieldCheck
+} from "react-icons/hi";
+import { 
+  HiOutlineBuildingLibrary, 
+  HiOutlineBuilding,
+  HiOutlineScale
+} from "react-icons/hi2";
 
 const UpiInfrastructurePage = () => {
   const productData = {
     title: "UPI Infrastructure",
     subtitle: "Enterprise-Grade UPI Solutions",
     description: "Robust and scalable UPI infrastructure designed for enterprises. Handle millions of UPI transactions with guaranteed uptime, security, and performance.",
-    icon: "🏗️",
+    icon: <HiOutlineBuildingLibrary />,
     features: [
       {
         title: "Scalable Architecture",
         description: "Auto-scaling infrastructure that grows with your transaction volume",
-        icon: "📈"
+        icon: <HiOutlineTrendingUp />
       },
       {
         title: "Multi-Bank Connectivity",
         description: "Direct connectivity with multiple banks for redundancy and optimization",
-        icon: "🏦"
+        icon: <HiOutlineBuilding />
       },
       {
         title: "Real-time Monitoring",
         description: "Advanced monitoring and alerting for proactive issue resolution",
-        icon: "📊"
+        icon: <HiOutlineChartBar />
       },
       {
         title: "Load Balancing",
         description: "Intelligent load distribution across multiple servers and regions",
-        icon: "⚖️"
+        icon: <HiOutlineScale />
       },
       {
         title: "Disaster Recovery",
         description: "Comprehensive backup and disaster recovery mechanisms",
-        icon: "🛡️"
+        icon: <HiOutlineShieldCheck />
       },
       {
         title: "Performance Analytics",
         description: "Detailed performance metrics and transaction analytics",
-        icon: "📈"
+        icon: <HiOutlineTrendingUp />
       }
     ],
     benefits: [

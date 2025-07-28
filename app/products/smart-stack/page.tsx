@@ -7,43 +7,57 @@ import ProductSection from '../../../components/(products)/ProductSection';
 import ProductFeatures from '../../../components/(products)/ProductFeatures';
 import ProductItems from '../../../components/(products)/ProductItems';
 import ProductFooter from '../../../components/(products)/ProductFooter';
+import { 
+  HiOutlineChartBar, 
+  HiOutlineCamera, 
+  HiOutlineLink, 
+  HiOutlineShieldCheck,
+  HiOutlineCurrencyDollar,
+  HiOutlineDocumentText
+} from "react-icons/hi";
+import { 
+  HiOutlineCpuChip,
+  HiOutlineDevicePhoneMobile,
+  HiOutlineClipboardDocumentList,
+  HiOutlineExclamationTriangle
+} from "react-icons/hi2";
 
 const SmartStackPage = () => {
   const productData = {
     title: "Smart Stack",
     subtitle: "Intelligent Business Management",
     description: "Revolutionary business management platform powered by artificial intelligence. Transform your expense management, financial operations, and business processes with intelligent automation and real-time insights.",
-    icon: "🧠",
+    icon: <HiOutlineCpuChip />,
     features: [
       {
         title: "AI-Powered Automation",
         description: "Advanced machine learning algorithms automate routine tasks, data entry, and decision-making processes",
-        icon: "🤖"
+        icon: <HiOutlineCpuChip />
       },
       {
         title: "Intelligent Analytics",
         description: "Real-time business intelligence with predictive analytics and actionable insights",
-        icon: "📊"
+        icon: <HiOutlineChartBar />
       },
       {
         title: "Smart OCR Technology",
         description: "Extract data from receipts, invoices, and documents with 99%+ accuracy using advanced OCR",
-        icon: "📸"
+        icon: <HiOutlineCamera />
       },
       {
         title: "Seamless Integration",
         description: "Connect with 100+ business tools including ERP, accounting, and productivity platforms",
-        icon: "🔗"
+        icon: <HiOutlineLink />
       },
       {
         title: "Mobile-First Platform",
         description: "Full-featured mobile apps for iOS and Android with offline capabilities",
-        icon: "📱"
+        icon: <HiOutlineDevicePhoneMobile />
       },
       {
         title: "Enterprise Security",
         description: "Bank-grade security with encryption, SSO, and compliance with global standards",
-        icon: "🔒"
+        icon: <HiOutlineShieldCheck />
       }
     ],
     // services: [
@@ -59,19 +73,19 @@ const SmartStackPage = () => {
         title: "Smart Receipt Processing",
         description: "Automatically extract and categorize expense data from receipts and invoices",
         accuracy: "99.2%",
-        icon: "📄"
+        icon: <HiOutlineDocumentText />
       },
       {
         title: "Policy Compliance",
         description: "AI-powered policy enforcement with real-time violation detection",
         accuracy: "95%",
-        icon: "📋"
+        icon: <HiOutlineClipboardDocumentList />
       },
       {
         title: "Fraud Detection",
         description: "Machine learning algorithms detect suspicious patterns and potential fraud",
         accuracy: "98.5%",
-        icon: "🛡️"
+        icon: <HiOutlineExclamationTriangle />
       },
       {
         title: "Predictive Analytics",
